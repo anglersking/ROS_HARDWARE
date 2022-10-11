@@ -214,4 +214,35 @@ void TIM6_DAC_IRQHandler(void)
 
 /* USER CODE BEGIN 1 */
 
+/*unsigned char Rcount = 0;
+
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
+{
+	HAL_UART_Transmit(&huart1, (uint8_t *)"已经中断",10, 100);
+	if(huart->Instance == USART1)
+	{
+		printf("已经进入串口中断！！！！！！！！！");
+		HAL_UART_Receive_IT(&huart1, Recive_Data.buffer, sizeof(Recive_Data.buffer));
+		HAL_UART_Transmit(&huart1,Recive_Data.buffer, sizeof(Recive_Data.buffer), 100);
+		(Recive_Data.buffer[0] == 0xFe)?(Rcount++):(Rcount = 0);
+	
+		if (Rcount !=0)	//验证数据包的长度
+		{
+			printf("INTERUPT %x,%x",Recive_Data.Sensor_Str.Header,PROTOCOL_HEADER);
+			if(Recive_Data.Sensor_Str.Header == PROTOCOL_HEADER)	//验证数据包的头部校验信息
+			{
+				printf("INTERUPTendend %x,%x",Recive_Data.Sensor_Str.End_flag,PROTOCOL_END);
+				if(Recive_Data.Sensor_Str.End_flag == PROTOCOL_END)	//验证数据包的尾部校验信息
+				{
+					printf("INTERUPT vvv %f,%f",Recive_Data.Sensor_Str.X_speed,Recive_Data.Sensor_Str.Z_speed);
+					//接收上位机控制命令，使机器人产生相应的运动
+					Kinematics_Positive(Recive_Data.Sensor_Str.X_speed, Recive_Data.Sensor_Str.Z_speed);
+				}
+			}
+			Rcount = 0;
+		}
+	} 
+}
+
+*/
 /* USER CODE END 1 */
