@@ -169,7 +169,8 @@ void DebugMon_Handler(void)
 void USART1_IRQHandler(void)
 {
   /* USER CODE BEGIN USART1_IRQn 0 */
-   
+	HAL_UART_Receive_IT(&huart1, Recive_Data.buffer, sizeof(Recive_Data.buffer));
+  /*
 	//判断接收标志置位
 	if(__HAL_UART_GET_FLAG(&huart1,UART_FLAG_RXNE) == SET){
 		//读取接收寄存器
@@ -190,7 +191,7 @@ void USART1_IRQHandler(void)
 		
 		//进行入队操作
 		//xQueueSendFromISR(Ubuntu_data_QueueHandle,&Recive_Data,NULL);
-	}
+	}*/
   /* USER CODE END USART1_IRQn 0 */
   HAL_UART_IRQHandler(&huart1);
   /* USER CODE BEGIN USART1_IRQn 1 */
@@ -214,35 +215,30 @@ void TIM6_DAC_IRQHandler(void)
 
 /* USER CODE BEGIN 1 */
 
-/*unsigned char Rcount = 0;
-
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
-	HAL_UART_Transmit(&huart1, (uint8_t *)"已经中断",10, 100);
 	if(huart->Instance == USART1)
 	{
-		printf("已经进入串口中断！！！！！！！！！");
 		HAL_UART_Receive_IT(&huart1, Recive_Data.buffer, sizeof(Recive_Data.buffer));
-		HAL_UART_Transmit(&huart1,Recive_Data.buffer, sizeof(Recive_Data.buffer), 100);
 		(Recive_Data.buffer[0] == 0xFe)?(Rcount++):(Rcount = 0);
 	
-		if (Rcount !=0)	//验证数据包的长度
+		if (Rcount ==PROTOCL_DATA_SIZE)	//验证数据包的长度 之前是 !=0
 		{
-			printf("INTERUPT %x,%x",Recive_Data.Sensor_Str.Header,PROTOCOL_HEADER);
+		//	printf("INTERUPT %x,%x",Recive_Data.Sensor_Str.Header,PROTOCOL_HEADER);
 			if(Recive_Data.Sensor_Str.Header == PROTOCOL_HEADER)	//验证数据包的头部校验信息
 			{
-				printf("INTERUPTendend %x,%x",Recive_Data.Sensor_Str.End_flag,PROTOCOL_END);
+			//	printf("INTERUPTendend %x,%x",Recive_Data.Sensor_Str.End_flag,PROTOCOL_END);
 				if(Recive_Data.Sensor_Str.End_flag == PROTOCOL_END)	//验证数据包的尾部校验信息
 				{
-					printf("INTERUPT vvv %f,%f",Recive_Data.Sensor_Str.X_speed,Recive_Data.Sensor_Str.Z_speed);
+				//	printf("INTERUPT vvv %f,%f",Recive_Data.Sensor_Str.X_speed,Recive_Data.Sensor_Str.Z_speed);
 					//接收上位机控制命令，使机器人产生相应的运动
 					Kinematics_Positive(Recive_Data.Sensor_Str.X_speed, Recive_Data.Sensor_Str.Z_speed);
 				}
 			}
 			Rcount = 0;
 		}
+		HAL_UART_Receive_IT(&huart1, Recive_Data.buffer, sizeof(Recive_Data.buffer));
 	} 
 }
 
-*/
 /* USER CODE END 1 */
