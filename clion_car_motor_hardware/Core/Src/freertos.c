@@ -22,10 +22,13 @@
 #include "task.h"
 #include "main.h"
 #include "cmsis_os.h"
+#include "stdio.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "usart.h"
+#include "contrl.h"
+#include "comminicate.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -142,7 +145,8 @@ void StartTask_uart2(void const * argument)
   /* Infinite loop */
   for(;;)
   {
-    osDelay(1);
+//    HAL_UART_Transmit(&huart1,(uint8_t *) "GPS TASK\n", 9, 100);
+    osDelay(1000);
   }
   /* USER CODE END StartTask_uart2 */
 }
@@ -157,12 +161,16 @@ void StartTask_uart2(void const * argument)
 void StartTask_uart1(void const * argument)
 {
   /* USER CODE BEGIN StartTask_uart1 */
-  printf("uart1_init");
+//  printf("uart1_init");
 
   /* Infinite loop */
   for(;;)
   {
-    osDelay(1);
+
+//    printf("Task uart");
+//    HAL_UART_Transmit(&huart1,(uint8_t *) "UART SEND\n", 10, 100);
+    SendTo_UbuntuPC();
+    osDelay(1000);
   }
   /* USER CODE END StartTask_uart1 */
 }
@@ -180,7 +188,8 @@ void StartTask_PID(void const * argument)
   /* Infinite loop */
   for(;;)
   {
-    osDelay(1);
+//    HAL_UART_Transmit(&huart1,(uint8_t *) "control Task\n", 13, 100);
+    osDelay(1000);
   }
   /* USER CODE END StartTask_PID */
 }
@@ -198,7 +207,8 @@ void StartTask_IMU(void const * argument)
   /* Infinite loop */
   for(;;)
   {
-    osDelay(1);
+//    HAL_UART_Transmit(&huart1,(uint8_t *) "IMU TASK\n", 9, 100);
+    osDelay(1000);
   }
   /* USER CODE END StartTask_IMU */
 }

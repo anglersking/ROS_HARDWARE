@@ -1,3 +1,3 @@
-C:/Users/41884/CLionProjects/clion_car_motor_hardware/cmake-build-debug/CMakeFiles/clion_car_motor_hardware.elf.dir
-C:/Users/41884/CLionProjects/clion_car_motor_hardware/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/41884/CLionProjects/clion_car_motor_hardware/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/41884/Documents/git_anglersking_project/ROS_HARDWARE/clion_car_motor_hardware/cmake-build-debug/CMakeFiles/clion_car_motor_hardware.elf.dir
+C:/Users/41884/Documents/git_anglersking_project/ROS_HARDWARE/clion_car_motor_hardware/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/41884/Documents/git_anglersking_project/ROS_HARDWARE/clion_car_motor_hardware/cmake-build-debug/CMakeFiles/rebuild_cache.dir
