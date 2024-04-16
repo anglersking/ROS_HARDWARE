@@ -186,6 +186,10 @@ void USART1_IRQHandler(void)
 {
     /* USER CODE BEGIN USART1_IRQn 0 */
     HAL_UART_Receive_IT(&huart1, Recive_Data.buffer, sizeof(Recive_Data.buffer));
+//    HAL_UART_Transmit(&huart1,(uint8_t *) "init hahaha\n", 9, 100);
+//
+//    HAL_UART_Receive_IT(&huart1, Recive_Data.buffer, sizeof(Recive_Data.buffer));
+
     //判断接收标志置位
 //    if(__HAL_UART_GET_FLAG(&huart1,UART_FLAG_RXNE) == SET){
 //        //读取接收寄存器
@@ -260,8 +264,11 @@ void TIM6_DAC_IRQHandler(void)
 /* USER CODE BEGIN 1 */
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
+//    HAL_UART_Transmit(&huart1,(uint8_t *) "init callbak\n", 9, 100);
+
     if(huart->Instance == USART1)
     {
+//        HAL_UART_Transmit(&huart1,(uint8_t *) "init callback\n", 14, 100);
         HAL_UART_Receive_IT(&huart1, Recive_Data.buffer, sizeof(Recive_Data.buffer));
         (Recive_Data.buffer[0] == 0xFe)?(Rcount++):(Rcount = 0);
 
@@ -275,6 +282,7 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
                 {
                     //	printf("INTERUPT vvv %f,%f",Recive_Data.Sensor_Str.X_speed,Recive_Data.Sensor_Str.Z_speed);
                     //接收上位机控制命令，使机器人产生相应的运动
+                    HAL_UART_Transmit(&huart1,(uint8_t *) "in control\n", 12, 100);
                     Kinematics_Positive(Recive_Data.Sensor_Str.X_speed, Recive_Data.Sensor_Str.Z_speed);
                 }
             }
