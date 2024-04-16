@@ -190,8 +190,8 @@ void StartTask_PID(void const * argument)
   for(;;)
   {
       Car_Task_100HZ();
-      Moto_Control_speed(Right_moto.Current_Speed, Right_moto.Target_Speed ,MOTO_RIGHT);
-      Moto_Control_speed(Left_moto.Current_Speed,  Left_moto.Target_Speed  ,MOTO_LEFT );
+//      Moto_Control_speed(Right_moto.Current_Speed, Right_moto.Target_Speed ,MOTO_RIGHT);
+//      Moto_Control_speed(Left_moto.Current_Speed,  Left_moto.Target_Speed  ,MOTO_LEFT );
 //    HAL_UART_Transmit(&huart1,(uint8_t *) "control Task\n", 13, 100);
     osDelay(1000);
   }

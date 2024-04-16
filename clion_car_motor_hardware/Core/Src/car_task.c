@@ -66,7 +66,7 @@ void Car_Task_100HZ(void)
                 //Vertical_turn_PD(Contrl_Turn, OutMpu.gyro_z);
 	
 	//4��ȷ���������ҵ����PWM
-	  printf("Balance_Pwm:%d,Velocity_Pwm:%d,Turn_Pwm:%d",Balance_Pwm,Velocity_Pwm,Turn_Pwm);
+//	  printf("Balance_Pwm:%d,Velocity_Pwm:%d,Turn_Pwm:%d",Balance_Pwm,Velocity_Pwm,Turn_Pwm);
 		Motor1 = Balance_Pwm + Velocity_Pwm + Turn_Pwm;
 	  Motor2 = Balance_Pwm + Velocity_Pwm - Turn_Pwm;
 	
