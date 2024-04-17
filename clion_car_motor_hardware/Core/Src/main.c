@@ -96,8 +96,8 @@ int main(void)
   MX_USART1_UART_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
-    RetargetInit(&huart1);
-    printf("ROS_Hardware INIT \n");
+//    RetargetInit(&huart1);
+//    printf("ROS_Hardware INIT \n");
 //    HALLSensor_TIMx_Init();
     HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1);
     HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_2);
