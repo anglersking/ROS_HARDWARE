@@ -282,7 +282,7 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
                 {
                     //	printf("INTERUPT vvv %f,%f",Recive_Data.Sensor_Str.X_speed,Recive_Data.Sensor_Str.Z_speed);
                     //接收上位机控制命令，使机器人产生相应的运动
-                    HAL_UART_Transmit(&huart1,(uint8_t *) "in control\n", 12, 100);
+//                    HAL_UART_Transmit(&huart1,(uint8_t *) "in control\n", 12, 100);
                     Kinematics_Positive(Recive_Data.Sensor_Str.X_speed, Recive_Data.Sensor_Str.Z_speed);
                 }
             }

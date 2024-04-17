@@ -22,13 +22,15 @@
   <component name="ChangeListManager">
     <list default="true" id="b0f86ecb-a696-4208-9d8a-0a4426f70256" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/car_task.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/car_task.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/contrl.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/contrl.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Src/freertos.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/freertos.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/main.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Src/stm32f4xx_it.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/stm32f4xx_it.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/car_task.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/car_task.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/contrl.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/contrl.c.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/freertos.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/freertos.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/main.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/main.c.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/stm32f4xx_it.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/stm32f4xx_it.c.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/clion_car_motor_hardware.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/clion_car_motor_hardware.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/clion_car_motor_hardware.elf" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/clion_car_motor_hardware.elf" afterDir="false" />

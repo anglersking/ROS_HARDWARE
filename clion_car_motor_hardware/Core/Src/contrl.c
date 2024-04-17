@@ -46,6 +46,7 @@ int Read_Encoder(uint8_t TIMX)
 
 void  Robot_Encoder_Get_CNT(void)
 {
+
 	Left_moto.Encoder_Value   = Read_Encoder(1);		//读取左右轮子的脉冲累计数
 	Right_moto.Encoder_Value  = -Read_Encoder(2);
 	

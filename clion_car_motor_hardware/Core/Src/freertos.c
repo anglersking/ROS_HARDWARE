@@ -190,6 +190,23 @@ void StartTask_PID(void const * argument)
   for(;;)
   {
 //      Car_Task_100HZ();
+
+      if (Right_moto.Target_Speed<20)
+      {
+          Left_moto.Encoder_Value   = 100;		//读取左右轮子的脉冲累计数
+          Right_moto.Encoder_Value  = 100;
+          Left_moto.Current_Speed=100;
+          Right_moto.Current_Speed=200;
+      }
+      else{
+          Left_moto.Encoder_Value   = 0;		//读取左右轮子的脉冲累计数
+          Right_moto.Encoder_Value  = 0;
+
+          Left_moto.Current_Speed=0;
+          Right_moto.Current_Speed=0;
+//          Robot_Encoder_Get_CNT();
+      }
+
 //      Moto_Control_speed(Right_moto.Current_Speed, Right_moto.Target_Speed ,MOTO_RIGHT);
 //      Moto_Control_speed(Left_moto.Current_Speed,  Left_moto.Target_Speed  ,MOTO_LEFT );
 //    HAL_UART_Transmit(&huart1,(uint8_t *) "control Task\n", 13, 100);

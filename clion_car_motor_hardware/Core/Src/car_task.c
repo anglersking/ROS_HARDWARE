@@ -67,14 +67,14 @@ void Car_Task_100HZ(void)
 	
 	//4��ȷ���������ҵ����PWM
 //	  printf("Balance_Pwm:%d,Velocity_Pwm:%d,Turn_Pwm:%d",Balance_Pwm,Velocity_Pwm,Turn_Pwm);
-		Motor1 = Balance_Pwm + Velocity_Pwm + Turn_Pwm;
+      Motor1 = Balance_Pwm + Velocity_Pwm + Turn_Pwm;
 	  Motor2 = Balance_Pwm + Velocity_Pwm - Turn_Pwm;
 	
-		PWM_Limiting(&Motor1,&Motor2);
+      PWM_Limiting(&Motor1,&Motor2);
 	
 	
 	//5�����õ��
-		Set_PWM(Motor1,Motor2);
+     Set_PWM(Motor1,Motor2);
 	
 }
 
