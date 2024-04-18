@@ -24,6 +24,7 @@
 /* USER CODE BEGIN Includes */
 #include "usart.h"
 #include "comminicate.h"
+#include "contrl.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -262,6 +263,22 @@ void TIM6_DAC_IRQHandler(void)
 }
 
 /* USER CODE BEGIN 1 */
+#include <stdio.h>
+#include <string.h>
+void SendFloatOverUART(UART_HandleTypeDef *huart, float value) {
+    char buffer[32]; // 足够大的缓冲区来存储浮点数和终止符
+    int length;
+
+    // 使用sprintf将浮点数转换为字符串，并指定小数点后的位数（例如2位）
+    length = sprintf(buffer, "%.2f", value);
+
+    // 确保字符串以null字符结束
+    buffer[length] = '\0';
+
+    // 发送字符串
+    HAL_UART_Transmit(huart, (uint8_t *)buffer, strlen(buffer), HAL_MAX_DELAY);
+}
+
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
 //    HAL_UART_Transmit(&huart1,(uint8_t *) "init callbak\n", 9, 100);
@@ -280,10 +297,20 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
                 //	printf("INTERUPTendend %x,%x",Recive_Data.Sensor_Str.End_flag,PROTOCOL_END);
                 if(Recive_Data.Sensor_Str.End_flag == PROTOCOL_END)	//验证数据包的尾部校验信息
                 {
-                    //	printf("INTERUPT vvv %f,%f",Recive_Data.Sensor_Str.X_speed,Recive_Data.Sensor_Str.Z_speed);
+//                    	printf("INTERUPT vvv %f,%f",Recive_Data.Sensor_Str.X_speed,Recive_Data.Sensor_Str.Z_speed);
                     //接收上位机控制命令，使机器人产生相应的运动
-//                    HAL_UART_Transmit(&huart1,(uint8_t *) "in control\n", 12, 100);
+//                    SendFloatOverUART(&huart1, Left_moto.Target_Speed  );
+//                    SendFloatOverUART(&huart1, Right_moto.Target_Speed  );
+//                    HAL_UART_Transmit(&huart1,(uint8_t *) "in control\n", 11, 100);
+//                    SendFloatOverUART(&huart1, Recive_Data.Sensor_Str.X_speed);
+                    int a= Recive_Data.Sensor_Str.X_speed;
+//                    HAL_UART_Transmit(&huart1,(uint8_t *) a, 12, 100);
+//                    HAL_UART_Transmit(&huart1,Recive_Data.Sensor_Str.X_speed, 12, 100);
                     Kinematics_Positive(Recive_Data.Sensor_Str.X_speed, Recive_Data.Sensor_Str.Z_speed);
+//                    SendFloatOverUART(&huart1, Left_moto.Target_Speed  );
+//                    SendFloatOverUART(&huart1, Right_moto.Target_Speed  );
+
+
                 }
             }
             Rcount = 0;
