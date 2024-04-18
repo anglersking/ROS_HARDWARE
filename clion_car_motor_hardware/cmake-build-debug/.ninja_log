@@ -79,3 +79,16 @@
 128	310	7351148683335259	clion_car_motor_hardware.elf	5a8ecd5cdf4e0a27
 1	127	7351150668906504	CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/freertos.c.obj	1194d11580ba514f
 127	303	7351150670158932	clion_car_motor_hardware.elf	5a8ecd5cdf4e0a27
+2	839	7351315596513737	CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/freertos.c.obj	1194d11580ba514f
+839	1291	7351315600480551	clion_car_motor_hardware.elf	5a8ecd5cdf4e0a27
+1	111	7351316626867771	CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/freertos.c.obj	1194d11580ba514f
+111	277	7351316628020003	clion_car_motor_hardware.elf	5a8ecd5cdf4e0a27
+7	118	7351358756854302	CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/comminicate.c.obj	f5aa50649722db75
+2	129	7351358756973909	CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/freertos.c.obj	1194d11580ba514f
+129	318	7351358758345750	clion_car_motor_hardware.elf	5a8ecd5cdf4e0a27
+1	125	7351395512365549	CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/comminicate.c.obj	f5aa50649722db75
+5	134	7351395512462974	CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/stm32f4xx_it.c.obj	2ea61ab2f58b9851
+134	329	7351395513884472	clion_car_motor_hardware.elf	5a8ecd5cdf4e0a27
+6	114	7351398879877377	CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/comminicate.c.obj	f5aa50649722db75
+2	124	7351398879982899	CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/freertos.c.obj	1194d11580ba514f
+124	295	7351398881200159	clion_car_motor_hardware.elf	5a8ecd5cdf4e0a27

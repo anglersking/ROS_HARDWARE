@@ -171,7 +171,7 @@ void StartTask_uart1(void const * argument)
 //    printf("Task uart");
 //    HAL_UART_Transmit(&huart1,(uint8_t *) "UART SEND\n", 10, 100);
     SendTo_UbuntuPC();
-    osDelay(1000);
+    osDelay(100);
   }
   /* USER CODE END StartTask_uart1 */
 }
@@ -191,31 +191,35 @@ void StartTask_PID(void const * argument)
   for(;;)
   {
 //      Car_Task_100HZ();
+//
+      Left_moto.Current_Speed = Left_moto.Target_Speed;
+      Right_moto.Current_Speed = Right_moto.Target_Speed ;
 
 
-      if (Right_moto.Target_Speed<20 )
-      {
-          if (flag==1) {
-              Left_moto.Encoder_Value = 100;        //读取左右轮子的脉冲累计数
-              Right_moto.Encoder_Value = 100;
-              Left_moto.Current_Speed = 100;
-              Right_moto.Current_Speed = 200;
-              flag=2;
-          }
 
-      }
-      if (Right_moto.Target_Speed>=20  )
-      {
-          if(flag==2) {
-              Left_moto.Encoder_Value = 700;        //读取左右轮子的脉冲累计数
-              Right_moto.Encoder_Value = 700;
-
-              Left_moto.Current_Speed = 700;
-              Right_moto.Current_Speed = 700;
-              flag=1;
-          }
-//          Robot_Encoder_Get_CNT();
-      }
+//      if (Right_moto.Target_Speed==0.0 )
+//      {
+//          if (flag==1) {
+//              Left_moto.Encoder_Value = 100;        //读取左右轮子的脉冲累计数
+//              Right_moto.Encoder_Value = 100;
+//              Left_moto.Current_Speed = 100;
+//              Right_moto.Current_Speed = 200;
+//              flag=2;
+//          }
+//
+//      }
+//      if (Right_moto.Target_Speed>0.0  )
+//      {
+//          if(flag==2) {
+//              Left_moto.Encoder_Value = 700;        //读取左右轮子的脉冲累计数
+//              Right_moto.Encoder_Value = 700;
+//
+//              Left_moto.Current_Speed = 700;
+//              Right_moto.Current_Speed = 700;
+//              flag=1;
+//          }
+////          Robot_Encoder_Get_CNT();
+//      }
 
 //      Moto_Control_speed(Right_moto.Current_Speed, Right_moto.Target_Speed ,MOTO_RIGHT);
 //      Moto_Control_speed(Left_moto.Current_Speed,  Left_moto.Target_Speed  ,MOTO_LEFT );

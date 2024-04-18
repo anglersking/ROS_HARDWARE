@@ -297,13 +297,16 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
                 //	printf("INTERUPTendend %x,%x",Recive_Data.Sensor_Str.End_flag,PROTOCOL_END);
                 if(Recive_Data.Sensor_Str.End_flag == PROTOCOL_END)	//验证数据包的尾部校验信息
                 {
+
+                    Send_Data.Sensor_Str.Source_Voltage = Recive_Data.Sensor_Str.X_speed;//Source_Valtage;
+
 //                    	printf("INTERUPT vvv %f,%f",Recive_Data.Sensor_Str.X_speed,Recive_Data.Sensor_Str.Z_speed);
                     //接收上位机控制命令，使机器人产生相应的运动
 //                    SendFloatOverUART(&huart1, Left_moto.Target_Speed  );
 //                    SendFloatOverUART(&huart1, Right_moto.Target_Speed  );
 //                    HAL_UART_Transmit(&huart1,(uint8_t *) "in control\n", 11, 100);
 //                    SendFloatOverUART(&huart1, Recive_Data.Sensor_Str.X_speed);
-                    int a= Recive_Data.Sensor_Str.X_speed;
+
 //                    HAL_UART_Transmit(&huart1,(uint8_t *) a, 12, 100);
 //                    HAL_UART_Transmit(&huart1,Recive_Data.Sensor_Str.X_speed, 12, 100);
                     Kinematics_Positive(Recive_Data.Sensor_Str.X_speed, Recive_Data.Sensor_Str.Z_speed);

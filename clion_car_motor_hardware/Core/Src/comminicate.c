@@ -68,8 +68,11 @@ void SendTo_UbuntuPC()
 	Send_Data.Sensor_Str.X_speed = (Left_moto.Current_Speed + Right_moto.Current_Speed)/2.0f;
 	Send_Data.Sensor_Str.Y_speed = 0.0;
 	Send_Data.Sensor_Str.Z_speed = (Left_moto.Current_Speed - Right_moto.Current_Speed)/Base_Width;
+    // Send_Data.Sensor_Str.X_speed = Left_moto.Current_Speed;
+    // Send_Data.Sensor_Str.Y_speed = 0.0;
+    // Send_Data.Sensor_Str.Z_speed = Right_moto.Current_Speed;
 	
-	Send_Data.Sensor_Str.Source_Voltage = 100;//Source_Valtage;
+//	Send_Data.Sensor_Str.Source_Voltage = 100;//Source_Valtage; can be 100
 //    printf("%f\n",Send_Data.Sensor_Str.Source_Voltage);
 	
 	for(i=0; i<PROTOCL_DATA_SIZE; i++)
