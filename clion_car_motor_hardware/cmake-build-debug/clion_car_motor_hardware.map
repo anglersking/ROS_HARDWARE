@@ -2298,7 +2298,7 @@ LOAD c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/
                 0x08000000                g_pfnVectors
                 0x08000188                . = ALIGN (0x4)
 
-.text           0x08000190     0x4040
+.text           0x08000190     0x4060
                 0x08000190                . = ALIGN (0x4)
  *(.text)
  .text          0x08000190       0x40 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
@@ -2326,610 +2326,610 @@ LOAD c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/
                 0x08000800       0x14 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/comminicate.c.obj
                 0x08000800                USART1_SendChar
  .text.SendTo_UbuntuPC
-                0x08000814       0x44 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/comminicate.c.obj
+                0x08000814       0x68 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/comminicate.c.obj
                 0x08000814                SendTo_UbuntuPC
  .text.StartTask_uart2
-                0x08000858        0xc CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/freertos.c.obj
-                0x08000858                StartTask_uart2
+                0x0800087c        0xc CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/freertos.c.obj
+                0x0800087c                StartTask_uart2
  .text.StartTask_PID
-                0x08000864       0x20 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/freertos.c.obj
-                0x08000864                StartTask_PID
+                0x08000888       0x20 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/freertos.c.obj
+                0x08000888                StartTask_PID
  .text.StartTask_IMU
-                0x08000884        0xc CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/freertos.c.obj
-                0x08000884                StartTask_IMU
+                0x080008a8        0xc CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/freertos.c.obj
+                0x080008a8                StartTask_IMU
  .text.StartTask_uart1
-                0x08000890        0xe CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/freertos.c.obj
-                0x08000890                StartTask_uart1
- *fill*         0x0800089e        0x2 
+                0x080008b4        0xe CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/freertos.c.obj
+                0x080008b4                StartTask_uart1
+ *fill*         0x080008c2        0x2 
  .text.vApplicationGetIdleTaskMemory
-                0x080008a0       0x18 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/freertos.c.obj
-                0x080008a0                vApplicationGetIdleTaskMemory
+                0x080008c4       0x18 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/freertos.c.obj
+                0x080008c4                vApplicationGetIdleTaskMemory
  .text.MX_FREERTOS_Init
-                0x080008b8       0xac CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/freertos.c.obj
-                0x080008b8                MX_FREERTOS_Init
+                0x080008dc       0xac CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/freertos.c.obj
+                0x080008dc                MX_FREERTOS_Init
  .text.MX_GPIO_Init
-                0x08000964       0xb4 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/gpio.c.obj
-                0x08000964                MX_GPIO_Init
+                0x08000988       0xb4 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/gpio.c.obj
+                0x08000988                MX_GPIO_Init
  .text.HAL_TIM_PeriodElapsedCallback
-                0x08000a18       0x18 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/main.c.obj
-                0x08000a18                HAL_TIM_PeriodElapsedCallback
+                0x08000a3c       0x18 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/main.c.obj
+                0x08000a3c                HAL_TIM_PeriodElapsedCallback
  .text.Error_Handler
-                0x08000a30        0x4 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/main.c.obj
-                0x08000a30                Error_Handler
+                0x08000a54        0x4 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/main.c.obj
+                0x08000a54                Error_Handler
  .text.SystemClock_Config
-                0x08000a34       0xac CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/main.c.obj
-                0x08000a34                SystemClock_Config
- .text.main     0x08000ae0       0x44 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/main.c.obj
-                0x08000ae0                main
+                0x08000a58       0xac CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/main.c.obj
+                0x08000a58                SystemClock_Config
+ .text.main     0x08000b04       0x44 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/main.c.obj
+                0x08000b04                main
  .text.HAL_MspInit
-                0x08000b24       0x44 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
-                0x08000b24                HAL_MspInit
+                0x08000b48       0x44 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
+                0x08000b48                HAL_MspInit
  .text.HAL_InitTick
-                0x08000b68       0xa4 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/stm32f4xx_hal_timebase_tim.c.obj
-                0x08000b68                HAL_InitTick
+                0x08000b8c       0xa4 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/stm32f4xx_hal_timebase_tim.c.obj
+                0x08000b8c                HAL_InitTick
  .text.NMI_Handler
-                0x08000c0c        0x2 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/stm32f4xx_it.c.obj
-                0x08000c0c                NMI_Handler
+                0x08000c30        0x2 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/stm32f4xx_it.c.obj
+                0x08000c30                NMI_Handler
  .text.HardFault_Handler
-                0x08000c0e        0x2 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/stm32f4xx_it.c.obj
-                0x08000c0e                HardFault_Handler
+                0x08000c32        0x2 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/stm32f4xx_it.c.obj
+                0x08000c32                HardFault_Handler
  .text.MemManage_Handler
-                0x08000c10        0x2 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/stm32f4xx_it.c.obj
-                0x08000c10                MemManage_Handler
+                0x08000c34        0x2 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/stm32f4xx_it.c.obj
+                0x08000c34                MemManage_Handler
  .text.BusFault_Handler
-                0x08000c12        0x2 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/stm32f4xx_it.c.obj
-                0x08000c12                BusFault_Handler
+                0x08000c36        0x2 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/stm32f4xx_it.c.obj
+                0x08000c36                BusFault_Handler
  .text.UsageFault_Handler
-                0x08000c14        0x2 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/stm32f4xx_it.c.obj
-                0x08000c14                UsageFault_Handler
+                0x08000c38        0x2 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/stm32f4xx_it.c.obj
+                0x08000c38                UsageFault_Handler
  .text.DebugMon_Handler
-                0x08000c16        0x2 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/stm32f4xx_it.c.obj
-                0x08000c16                DebugMon_Handler
+                0x08000c3a        0x2 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/stm32f4xx_it.c.obj
+                0x08000c3a                DebugMon_Handler
  .text.TIM4_IRQHandler
-                0x08000c18       0x10 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/stm32f4xx_it.c.obj
-                0x08000c18                TIM4_IRQHandler
+                0x08000c3c       0x10 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/stm32f4xx_it.c.obj
+                0x08000c3c                TIM4_IRQHandler
  .text.USART1_IRQHandler
-                0x08000c28       0x20 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/stm32f4xx_it.c.obj
-                0x08000c28                USART1_IRQHandler
+                0x08000c4c       0x20 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/stm32f4xx_it.c.obj
+                0x08000c4c                USART1_IRQHandler
  .text.USART2_IRQHandler
-                0x08000c48       0x10 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/stm32f4xx_it.c.obj
-                0x08000c48                USART2_IRQHandler
+                0x08000c6c       0x10 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/stm32f4xx_it.c.obj
+                0x08000c6c                USART2_IRQHandler
  .text.TIM5_IRQHandler
-                0x08000c58       0x10 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/stm32f4xx_it.c.obj
-                0x08000c58                TIM5_IRQHandler
+                0x08000c7c       0x10 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/stm32f4xx_it.c.obj
+                0x08000c7c                TIM5_IRQHandler
  .text.TIM6_DAC_IRQHandler
-                0x08000c68       0x10 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/stm32f4xx_it.c.obj
-                0x08000c68                TIM6_DAC_IRQHandler
+                0x08000c8c       0x10 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/stm32f4xx_it.c.obj
+                0x08000c8c                TIM6_DAC_IRQHandler
  .text.HAL_UART_RxCpltCallback
-                0x08000c78       0x8c CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/stm32f4xx_it.c.obj
-                0x08000c78                HAL_UART_RxCpltCallback
- .text._sbrk    0x08000d04       0x48 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/sysmem.c.obj
-                0x08000d04                _sbrk
+                0x08000c9c       0x8c CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/stm32f4xx_it.c.obj
+                0x08000c9c                HAL_UART_RxCpltCallback
+ .text._sbrk    0x08000d28       0x48 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/sysmem.c.obj
+                0x08000d28                _sbrk
  .text.SystemInit
-                0x08000d4c       0x14 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/system_stm32f4xx.c.obj
-                0x08000d4c                SystemInit
+                0x08000d70       0x14 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/system_stm32f4xx.c.obj
+                0x08000d70                SystemInit
  .text.MX_TIM4_Init
-                0x08000d60       0x5c CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/tim.c.obj
-                0x08000d60                MX_TIM4_Init
+                0x08000d84       0x5c CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/tim.c.obj
+                0x08000d84                MX_TIM4_Init
  .text.MX_TIM5_Init
-                0x08000dbc       0x5c CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/tim.c.obj
-                0x08000dbc                MX_TIM5_Init
+                0x08000de0       0x5c CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/tim.c.obj
+                0x08000de0                MX_TIM5_Init
  .text.HAL_TIM_PWM_MspInit
-                0x08000e18       0x30 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/tim.c.obj
-                0x08000e18                HAL_TIM_PWM_MspInit
+                0x08000e3c       0x30 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/tim.c.obj
+                0x08000e3c                HAL_TIM_PWM_MspInit
  .text.HAL_TIMEx_HallSensor_MspInit
-                0x08000e48      0x108 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/tim.c.obj
-                0x08000e48                HAL_TIMEx_HallSensor_MspInit
+                0x08000e6c      0x108 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/tim.c.obj
+                0x08000e6c                HAL_TIMEx_HallSensor_MspInit
  .text.HAL_TIM_MspPostInit
-                0x08000f50       0x58 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/tim.c.obj
-                0x08000f50                HAL_TIM_MspPostInit
+                0x08000f74       0x58 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/tim.c.obj
+                0x08000f74                HAL_TIM_MspPostInit
  .text.MX_TIM3_Init
-                0x08000fa8       0x94 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/tim.c.obj
-                0x08000fa8                MX_TIM3_Init
+                0x08000fcc       0x94 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/tim.c.obj
+                0x08000fcc                MX_TIM3_Init
  .text.MX_USART1_UART_Init
-                0x0800103c       0x34 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/usart.c.obj
-                0x0800103c                MX_USART1_UART_Init
+                0x08001060       0x34 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/usart.c.obj
+                0x08001060                MX_USART1_UART_Init
  .text.MX_USART2_UART_Init
-                0x08001070       0x34 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/usart.c.obj
-                0x08001070                MX_USART2_UART_Init
+                0x08001094       0x34 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/usart.c.obj
+                0x08001094                MX_USART2_UART_Init
  .text.HAL_UART_MspInit
-                0x080010a4       0xec CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/usart.c.obj
-                0x080010a4                HAL_UART_MspInit
+                0x080010c8       0xec CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/usart.c.obj
+                0x080010c8                HAL_UART_MspInit
  .text.Reset_Handler
-                0x08001190       0x50 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Startup/startup_stm32f407igtx.s.obj
-                0x08001190                Reset_Handler
+                0x080011b4       0x50 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Startup/startup_stm32f407igtx.s.obj
+                0x080011b4                Reset_Handler
  .text.Default_Handler
-                0x080011e0        0x2 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Startup/startup_stm32f407igtx.s.obj
-                0x080011e0                RTC_Alarm_IRQHandler
-                0x080011e0                HASH_RNG_IRQHandler
-                0x080011e0                EXTI2_IRQHandler
-                0x080011e0                TIM8_CC_IRQHandler
-                0x080011e0                TIM1_CC_IRQHandler
-                0x080011e0                DMA2_Stream5_IRQHandler
-                0x080011e0                DMA1_Stream5_IRQHandler
-                0x080011e0                PVD_IRQHandler
-                0x080011e0                SDIO_IRQHandler
-                0x080011e0                TAMP_STAMP_IRQHandler
-                0x080011e0                CAN2_RX1_IRQHandler
-                0x080011e0                EXTI3_IRQHandler
-                0x080011e0                TIM8_TRG_COM_TIM14_IRQHandler
-                0x080011e0                TIM1_UP_TIM10_IRQHandler
-                0x080011e0                TIM8_UP_TIM13_IRQHandler
-                0x080011e0                I2C3_ER_IRQHandler
-                0x080011e0                EXTI0_IRQHandler
-                0x080011e0                I2C2_EV_IRQHandler
-                0x080011e0                DMA1_Stream2_IRQHandler
-                0x080011e0                CAN1_RX0_IRQHandler
-                0x080011e0                FPU_IRQHandler
-                0x080011e0                OTG_HS_WKUP_IRQHandler
-                0x080011e0                CAN2_SCE_IRQHandler
-                0x080011e0                DMA2_Stream2_IRQHandler
-                0x080011e0                SPI1_IRQHandler
-                0x080011e0                TIM1_BRK_TIM9_IRQHandler
-                0x080011e0                DCMI_IRQHandler
-                0x080011e0                CAN2_RX0_IRQHandler
-                0x080011e0                DMA2_Stream3_IRQHandler
-                0x080011e0                USART6_IRQHandler
-                0x080011e0                USART3_IRQHandler
-                0x080011e0                CAN1_RX1_IRQHandler
-                0x080011e0                UART5_IRQHandler
-                0x080011e0                DMA2_Stream0_IRQHandler
-                0x080011e0                I2C1_EV_IRQHandler
-                0x080011e0                DMA1_Stream6_IRQHandler
-                0x080011e0                DMA1_Stream1_IRQHandler
-                0x080011e0                UART4_IRQHandler
-                0x080011e0                TIM3_IRQHandler
-                0x080011e0                RCC_IRQHandler
-                0x080011e0                TIM8_BRK_TIM12_IRQHandler
-                0x080011e0                Default_Handler
-                0x080011e0                EXTI15_10_IRQHandler
-                0x080011e0                ADC_IRQHandler
-                0x080011e0                DMA1_Stream7_IRQHandler
-                0x080011e0                TIM7_IRQHandler
-                0x080011e0                CAN2_TX_IRQHandler
-                0x080011e0                DMA2_Stream7_IRQHandler
-                0x080011e0                I2C3_EV_IRQHandler
-                0x080011e0                EXTI9_5_IRQHandler
-                0x080011e0                RTC_WKUP_IRQHandler
-                0x080011e0                ETH_WKUP_IRQHandler
-                0x080011e0                SPI2_IRQHandler
-                0x080011e0                OTG_HS_EP1_IN_IRQHandler
-                0x080011e0                DMA1_Stream0_IRQHandler
-                0x080011e0                CAN1_TX_IRQHandler
-                0x080011e0                EXTI4_IRQHandler
-                0x080011e0                FSMC_IRQHandler
-                0x080011e0                ETH_IRQHandler
-                0x080011e0                OTG_HS_EP1_OUT_IRQHandler
-                0x080011e0                WWDG_IRQHandler
-                0x080011e0                TIM2_IRQHandler
-                0x080011e0                OTG_FS_WKUP_IRQHandler
-                0x080011e0                TIM1_TRG_COM_TIM11_IRQHandler
-                0x080011e0                OTG_HS_IRQHandler
-                0x080011e0                EXTI1_IRQHandler
-                0x080011e0                I2C2_ER_IRQHandler
-                0x080011e0                DMA2_Stream1_IRQHandler
-                0x080011e0                CAN1_SCE_IRQHandler
-                0x080011e0                FLASH_IRQHandler
-                0x080011e0                DMA2_Stream4_IRQHandler
-                0x080011e0                OTG_FS_IRQHandler
-                0x080011e0                SPI3_IRQHandler
-                0x080011e0                DMA1_Stream4_IRQHandler
-                0x080011e0                I2C1_ER_IRQHandler
-                0x080011e0                DMA2_Stream6_IRQHandler
-                0x080011e0                DMA1_Stream3_IRQHandler
- *fill*         0x080011e2        0x2 
+                0x08001204        0x2 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Startup/startup_stm32f407igtx.s.obj
+                0x08001204                RTC_Alarm_IRQHandler
+                0x08001204                HASH_RNG_IRQHandler
+                0x08001204                EXTI2_IRQHandler
+                0x08001204                TIM8_CC_IRQHandler
+                0x08001204                TIM1_CC_IRQHandler
+                0x08001204                DMA2_Stream5_IRQHandler
+                0x08001204                DMA1_Stream5_IRQHandler
+                0x08001204                PVD_IRQHandler
+                0x08001204                SDIO_IRQHandler
+                0x08001204                TAMP_STAMP_IRQHandler
+                0x08001204                CAN2_RX1_IRQHandler
+                0x08001204                EXTI3_IRQHandler
+                0x08001204                TIM8_TRG_COM_TIM14_IRQHandler
+                0x08001204                TIM1_UP_TIM10_IRQHandler
+                0x08001204                TIM8_UP_TIM13_IRQHandler
+                0x08001204                I2C3_ER_IRQHandler
+                0x08001204                EXTI0_IRQHandler
+                0x08001204                I2C2_EV_IRQHandler
+                0x08001204                DMA1_Stream2_IRQHandler
+                0x08001204                CAN1_RX0_IRQHandler
+                0x08001204                FPU_IRQHandler
+                0x08001204                OTG_HS_WKUP_IRQHandler
+                0x08001204                CAN2_SCE_IRQHandler
+                0x08001204                DMA2_Stream2_IRQHandler
+                0x08001204                SPI1_IRQHandler
+                0x08001204                TIM1_BRK_TIM9_IRQHandler
+                0x08001204                DCMI_IRQHandler
+                0x08001204                CAN2_RX0_IRQHandler
+                0x08001204                DMA2_Stream3_IRQHandler
+                0x08001204                USART6_IRQHandler
+                0x08001204                USART3_IRQHandler
+                0x08001204                CAN1_RX1_IRQHandler
+                0x08001204                UART5_IRQHandler
+                0x08001204                DMA2_Stream0_IRQHandler
+                0x08001204                I2C1_EV_IRQHandler
+                0x08001204                DMA1_Stream6_IRQHandler
+                0x08001204                DMA1_Stream1_IRQHandler
+                0x08001204                UART4_IRQHandler
+                0x08001204                TIM3_IRQHandler
+                0x08001204                RCC_IRQHandler
+                0x08001204                TIM8_BRK_TIM12_IRQHandler
+                0x08001204                Default_Handler
+                0x08001204                EXTI15_10_IRQHandler
+                0x08001204                ADC_IRQHandler
+                0x08001204                DMA1_Stream7_IRQHandler
+                0x08001204                TIM7_IRQHandler
+                0x08001204                CAN2_TX_IRQHandler
+                0x08001204                DMA2_Stream7_IRQHandler
+                0x08001204                I2C3_EV_IRQHandler
+                0x08001204                EXTI9_5_IRQHandler
+                0x08001204                RTC_WKUP_IRQHandler
+                0x08001204                ETH_WKUP_IRQHandler
+                0x08001204                SPI2_IRQHandler
+                0x08001204                OTG_HS_EP1_IN_IRQHandler
+                0x08001204                DMA1_Stream0_IRQHandler
+                0x08001204                CAN1_TX_IRQHandler
+                0x08001204                EXTI4_IRQHandler
+                0x08001204                FSMC_IRQHandler
+                0x08001204                ETH_IRQHandler
+                0x08001204                OTG_HS_EP1_OUT_IRQHandler
+                0x08001204                WWDG_IRQHandler
+                0x08001204                TIM2_IRQHandler
+                0x08001204                OTG_FS_WKUP_IRQHandler
+                0x08001204                TIM1_TRG_COM_TIM11_IRQHandler
+                0x08001204                OTG_HS_IRQHandler
+                0x08001204                EXTI1_IRQHandler
+                0x08001204                I2C2_ER_IRQHandler
+                0x08001204                DMA2_Stream1_IRQHandler
+                0x08001204                CAN1_SCE_IRQHandler
+                0x08001204                FLASH_IRQHandler
+                0x08001204                DMA2_Stream4_IRQHandler
+                0x08001204                OTG_FS_IRQHandler
+                0x08001204                SPI3_IRQHandler
+                0x08001204                DMA1_Stream4_IRQHandler
+                0x08001204                I2C1_ER_IRQHandler
+                0x08001204                DMA2_Stream6_IRQHandler
+                0x08001204                DMA1_Stream3_IRQHandler
+ *fill*         0x08001206        0x2 
  .text.HAL_Init
-                0x080011e4       0x34 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
-                0x080011e4                HAL_Init
+                0x08001208       0x34 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
+                0x08001208                HAL_Init
  .text.HAL_IncTick
-                0x08001218       0x18 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
-                0x08001218                HAL_IncTick
+                0x0800123c       0x18 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
+                0x0800123c                HAL_IncTick
  .text.HAL_GetTick
-                0x08001230        0xc CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
-                0x08001230                HAL_GetTick
+                0x08001254        0xc CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
+                0x08001254                HAL_GetTick
  .text.HAL_NVIC_SetPriorityGrouping
-                0x0800123c       0x24 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
-                0x0800123c                HAL_NVIC_SetPriorityGrouping
+                0x08001260       0x24 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
+                0x08001260                HAL_NVIC_SetPriorityGrouping
  .text.HAL_NVIC_SetPriority
-                0x08001260       0x70 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
-                0x08001260                HAL_NVIC_SetPriority
+                0x08001284       0x70 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
+                0x08001284                HAL_NVIC_SetPriority
  .text.HAL_NVIC_EnableIRQ
-                0x080012d0       0x1c CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
-                0x080012d0                HAL_NVIC_EnableIRQ
+                0x080012f4       0x1c CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
+                0x080012f4                HAL_NVIC_EnableIRQ
  .text.HAL_DMA_Abort
-                0x080012ec       0x94 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
-                0x080012ec                HAL_DMA_Abort
+                0x08001310       0x94 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
+                0x08001310                HAL_DMA_Abort
  .text.HAL_DMA_Abort_IT
-                0x08001380       0x26 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
-                0x08001380                HAL_DMA_Abort_IT
- *fill*         0x080013a6        0x2 
+                0x080013a4       0x26 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
+                0x080013a4                HAL_DMA_Abort_IT
+ *fill*         0x080013ca        0x2 
  .text.HAL_GPIO_Init
-                0x080013a8      0x1e4 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
-                0x080013a8                HAL_GPIO_Init
+                0x080013cc      0x1e4 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
+                0x080013cc                HAL_GPIO_Init
  .text.HAL_GPIO_ReadPin
-                0x0800158c        0xe CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
-                0x0800158c                HAL_GPIO_ReadPin
+                0x080015b0        0xe CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
+                0x080015b0                HAL_GPIO_ReadPin
  .text.HAL_GPIO_WritePin
-                0x0800159a        0xc CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
-                0x0800159a                HAL_GPIO_WritePin
- *fill*         0x080015a6        0x2 
+                0x080015be        0xc CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
+                0x080015be                HAL_GPIO_WritePin
+ *fill*         0x080015ca        0x2 
  .text.HAL_RCC_OscConfig
-                0x080015a8      0x3f8 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
-                0x080015a8                HAL_RCC_OscConfig
+                0x080015cc      0x3f8 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
+                0x080015cc                HAL_RCC_OscConfig
  .text.HAL_RCC_GetSysClockFreq
-                0x080019a0       0xd4 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
-                0x080019a0                HAL_RCC_GetSysClockFreq
+                0x080019c4       0xd4 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
+                0x080019c4                HAL_RCC_GetSysClockFreq
  .text.HAL_RCC_ClockConfig
-                0x08001a74      0x160 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
-                0x08001a74                HAL_RCC_ClockConfig
+                0x08001a98      0x160 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
+                0x08001a98                HAL_RCC_ClockConfig
  .text.HAL_RCC_GetHCLKFreq
-                0x08001bd4        0xc CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
-                0x08001bd4                HAL_RCC_GetHCLKFreq
+                0x08001bf8        0xc CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
+                0x08001bf8                HAL_RCC_GetHCLKFreq
  .text.HAL_RCC_GetPCLK1Freq
-                0x08001be0       0x20 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
-                0x08001be0                HAL_RCC_GetPCLK1Freq
+                0x08001c04       0x20 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
+                0x08001c04                HAL_RCC_GetPCLK1Freq
  .text.HAL_RCC_GetPCLK2Freq
-                0x08001c00       0x20 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
-                0x08001c00                HAL_RCC_GetPCLK2Freq
+                0x08001c24       0x20 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
+                0x08001c24                HAL_RCC_GetPCLK2Freq
  .text.HAL_RCC_GetClockConfig
-                0x08001c20       0x3c CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
-                0x08001c20                HAL_RCC_GetClockConfig
+                0x08001c44       0x3c CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
+                0x08001c44                HAL_RCC_GetClockConfig
  .text.TIM_OC1_SetConfig
-                0x08001c5c       0x68 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
+                0x08001c80       0x68 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
  .text.TIM_OC3_SetConfig
-                0x08001cc4       0x70 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
+                0x08001ce8       0x70 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
  .text.TIM_OC4_SetConfig
-                0x08001d34       0x50 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
+                0x08001d58       0x50 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
  .text.HAL_TIM_Base_MspInit
-                0x08001d84        0x2 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
-                0x08001d84                HAL_TIM_Base_MspInit
- *fill*         0x08001d86        0x2 
+                0x08001da8        0x2 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
+                0x08001da8                HAL_TIM_Base_MspInit
+ *fill*         0x08001daa        0x2 
  .text.HAL_TIM_Base_Start_IT
-                0x08001d88       0x88 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
-                0x08001d88                HAL_TIM_Base_Start_IT
+                0x08001dac       0x88 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
+                0x08001dac                HAL_TIM_Base_Start_IT
  .text.HAL_TIM_OC_DelayElapsedCallback
-                0x08001e10        0x2 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
-                0x08001e10                HAL_TIM_OC_DelayElapsedCallback
+                0x08001e34        0x2 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
+                0x08001e34                HAL_TIM_OC_DelayElapsedCallback
  .text.HAL_TIM_PWM_PulseFinishedCallback
-                0x08001e12        0x2 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
-                0x08001e12                HAL_TIM_PWM_PulseFinishedCallback
+                0x08001e36        0x2 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
+                0x08001e36                HAL_TIM_PWM_PulseFinishedCallback
  .text.HAL_TIM_TriggerCallback
-                0x08001e14        0x2 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
-                0x08001e14                HAL_TIM_TriggerCallback
+                0x08001e38        0x2 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
+                0x08001e38                HAL_TIM_TriggerCallback
  .text.HAL_TIM_IRQHandler
-                0x08001e16      0x17a CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
-                0x08001e16                HAL_TIM_IRQHandler
+                0x08001e3a      0x17a CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
+                0x08001e3a                HAL_TIM_IRQHandler
  .text.TIM_Base_SetConfig
-                0x08001f90       0xc8 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
-                0x08001f90                TIM_Base_SetConfig
+                0x08001fb4       0xc8 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
+                0x08001fb4                TIM_Base_SetConfig
  .text.HAL_TIM_Base_Init
-                0x08002058       0x58 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
-                0x08002058                HAL_TIM_Base_Init
+                0x0800207c       0x58 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
+                0x0800207c                HAL_TIM_Base_Init
  .text.HAL_TIM_PWM_Init
-                0x080020b0       0x58 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
-                0x080020b0                HAL_TIM_PWM_Init
+                0x080020d4       0x58 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
+                0x080020d4                HAL_TIM_PWM_Init
  .text.TIM_OC2_SetConfig
-                0x08002108       0x70 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
-                0x08002108                TIM_OC2_SetConfig
+                0x0800212c       0x70 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
+                0x0800212c                TIM_OC2_SetConfig
  .text.HAL_TIM_PWM_ConfigChannel
-                0x08002178       0xdc CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
-                0x08002178                HAL_TIM_PWM_ConfigChannel
+                0x0800219c       0xdc CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
+                0x0800219c                HAL_TIM_PWM_ConfigChannel
  .text.TIM_TI1_SetConfig
-                0x08002254       0x7c CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
-                0x08002254                TIM_TI1_SetConfig
+                0x08002278       0x7c CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
+                0x08002278                TIM_TI1_SetConfig
  .text.TIM_CCxChannelCmd
-                0x080022d0       0x1e CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
-                0x080022d0                TIM_CCxChannelCmd
- *fill*         0x080022ee        0x2 
+                0x080022f4       0x1e CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
+                0x080022f4                TIM_CCxChannelCmd
+ *fill*         0x08002312        0x2 
  .text.HAL_TIM_PWM_Start
-                0x080022f0      0x104 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
-                0x080022f0                HAL_TIM_PWM_Start
+                0x08002314      0x104 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
+                0x08002314                HAL_TIM_PWM_Start
  .text.HAL_TIM_PWM_Stop
-                0x080023f4       0x8c CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
-                0x080023f4                HAL_TIM_PWM_Stop
+                0x08002418       0x8c CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
+                0x08002418                HAL_TIM_PWM_Stop
  .text.TIM_CCxNChannelCmd
-                0x08002480       0x1e CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
+                0x080024a4       0x1e CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
  .text.HAL_TIMEx_HallSensor_Init
-                0x0800249e       0xd4 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
-                0x0800249e                HAL_TIMEx_HallSensor_Init
- *fill*         0x08002572        0x2 
+                0x080024c2       0xd4 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
+                0x080024c2                HAL_TIMEx_HallSensor_Init
+ *fill*         0x08002596        0x2 
  .text.HAL_TIMEx_PWMN_Start
-                0x08002574       0xf8 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
-                0x08002574                HAL_TIMEx_PWMN_Start
+                0x08002598       0xf8 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
+                0x08002598                HAL_TIMEx_PWMN_Start
  .text.HAL_TIMEx_PWMN_Stop
-                0x0800266c       0x76 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
-                0x0800266c                HAL_TIMEx_PWMN_Stop
- *fill*         0x080026e2        0x2 
+                0x08002690       0x76 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
+                0x08002690                HAL_TIMEx_PWMN_Stop
+ *fill*         0x08002706        0x2 
  .text.HAL_TIMEx_MasterConfigSynchronization
-                0x080026e4       0x8c CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
-                0x080026e4                HAL_TIMEx_MasterConfigSynchronization
+                0x08002708       0x8c CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
+                0x08002708                HAL_TIMEx_MasterConfigSynchronization
  .text.HAL_TIMEx_CommutCallback
-                0x08002770        0x2 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
-                0x08002770                HAL_TIMEx_CommutCallback
+                0x08002794        0x2 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
+                0x08002794                HAL_TIMEx_CommutCallback
  .text.HAL_TIMEx_BreakCallback
-                0x08002772        0x2 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
-                0x08002772                HAL_TIMEx_BreakCallback
+                0x08002796        0x2 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
+                0x08002796                HAL_TIMEx_BreakCallback
  .text.UART_EndRxTransfer
-                0x08002774       0x5c CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
+                0x08002798       0x5c CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
  .text.UART_Transmit_IT
-                0x080027d0       0x60 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
+                0x080027f4       0x60 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
  .text.UART_SetConfig
-                0x08002830      0x110 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
+                0x08002854      0x110 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
  .text.HAL_UART_Init
-                0x08002940       0x5e CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
-                0x08002940                HAL_UART_Init
+                0x08002964       0x5e CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
+                0x08002964                HAL_UART_Init
  .text.HAL_UART_TxCpltCallback
-                0x0800299e        0x2 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
-                0x0800299e                HAL_UART_TxCpltCallback
+                0x080029c2        0x2 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
+                0x080029c2                HAL_UART_TxCpltCallback
  .text.UART_EndTransmit_IT
-                0x080029a0       0x1a CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
+                0x080029c4       0x1a CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
  .text.HAL_UART_ErrorCallback
-                0x080029ba        0x2 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
-                0x080029ba                HAL_UART_ErrorCallback
+                0x080029de        0x2 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
+                0x080029de                HAL_UART_ErrorCallback
  .text.UART_DMAAbortOnError
-                0x080029bc       0x10 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
+                0x080029e0       0x10 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
  .text.HAL_UARTEx_RxEventCallback
-                0x080029cc        0x2 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
-                0x080029cc                HAL_UARTEx_RxEventCallback
+                0x080029f0        0x2 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
+                0x080029f0                HAL_UARTEx_RxEventCallback
  .text.UART_Receive_IT
-                0x080029ce       0xe2 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
+                0x080029f2       0xe2 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
  .text.HAL_UART_IRQHandler
-                0x08002ab0      0x280 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
-                0x08002ab0                HAL_UART_IRQHandler
+                0x08002ad4      0x280 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
+                0x08002ad4                HAL_UART_IRQHandler
  .text.UART_Start_Receive_IT
-                0x08002d30       0x3a CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
-                0x08002d30                UART_Start_Receive_IT
+                0x08002d54       0x3a CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
+                0x08002d54                UART_Start_Receive_IT
  .text.HAL_UART_Receive_IT
-                0x08002d6a       0x38 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
-                0x08002d6a                HAL_UART_Receive_IT
+                0x08002d8e       0x38 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
+                0x08002d8e                HAL_UART_Receive_IT
  .text.makeFreeRtosPriority
-                0x08002da2        0xc CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj
+                0x08002dc6        0xc CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj
  .text.osKernelStart
-                0x08002dae        0xa CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj
-                0x08002dae                osKernelStart
+                0x08002dd2        0xa CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj
+                0x08002dd2                osKernelStart
  .text.osThreadCreate
-                0x08002db8       0x6a CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj
-                0x08002db8                osThreadCreate
- .text.osDelay  0x08002e22        0xe CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj
-                0x08002e22                osDelay
+                0x08002ddc       0x6a CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj
+                0x08002ddc                osThreadCreate
+ .text.osDelay  0x08002e46        0xe CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj
+                0x08002e46                osDelay
  .text.vListInitialise
-                0x08002e30       0x16 CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
-                0x08002e30                vListInitialise
+                0x08002e54       0x16 CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
+                0x08002e54                vListInitialise
  .text.vListInitialiseItem
-                0x08002e46        0x6 CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
-                0x08002e46                vListInitialiseItem
+                0x08002e6a        0x6 CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
+                0x08002e6a                vListInitialiseItem
  .text.vListInsertEnd
-                0x08002e4c       0x16 CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
-                0x08002e4c                vListInsertEnd
+                0x08002e70       0x16 CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
+                0x08002e70                vListInsertEnd
  .text.vListInsert
-                0x08002e62       0x32 CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
-                0x08002e62                vListInsert
+                0x08002e86       0x32 CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
+                0x08002e86                vListInsert
  .text.uxListRemove
-                0x08002e94       0x26 CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
-                0x08002e94                uxListRemove
- *fill*         0x08002eba        0x2 
+                0x08002eb8       0x26 CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
+                0x08002eb8                uxListRemove
+ *fill*         0x08002ede        0x2 
  .text.prvTaskExitError
-                0x08002ebc       0x40 CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
+                0x08002ee0       0x40 CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
  .text.prvPortStartFirstTask
-                0x08002efc       0x28 CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
+                0x08002f20       0x28 CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
  .text.vPortEnableVFP
-                0x08002f24       0x14 CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
+                0x08002f48       0x14 CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
  .text.pxPortInitialiseStack
-                0x08002f38       0x2c CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
-                0x08002f38                pxPortInitialiseStack
- *fill*         0x08002f64        0xc 
+                0x08002f5c       0x2c CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
+                0x08002f5c                pxPortInitialiseStack
+ *fill*         0x08002f88        0x8 
  .text.SVC_Handler
-                0x08002f70       0x24 CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
-                0x08002f70                SVC_Handler
+                0x08002f90       0x24 CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
+                0x08002f90                SVC_Handler
  .text.vPortEnterCritical
-                0x08002f94       0x44 CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
-                0x08002f94                vPortEnterCritical
+                0x08002fb4       0x44 CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
+                0x08002fb4                vPortEnterCritical
  .text.vPortExitCritical
-                0x08002fd8       0x2c CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
-                0x08002fd8                vPortExitCritical
- *fill*         0x08003004        0xc 
+                0x08002ff8       0x2c CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
+                0x08002ff8                vPortExitCritical
+ *fill*         0x08003024        0xc 
  .text.PendSV_Handler
-                0x08003010       0x64 CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
-                0x08003010                PendSV_Handler
+                0x08003030       0x64 CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
+                0x08003030                PendSV_Handler
  .text.SysTick_Handler
-                0x08003074       0x2c CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
-                0x08003074                SysTick_Handler
+                0x08003094       0x2c CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
+                0x08003094                SysTick_Handler
  .text.vPortSetupTimerInterrupt
-                0x080030a0       0x28 CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
-                0x080030a0                vPortSetupTimerInterrupt
+                0x080030c0       0x28 CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
+                0x080030c0                vPortSetupTimerInterrupt
  .text.xPortStartScheduler
-                0x080030c8      0x118 CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
-                0x080030c8                xPortStartScheduler
+                0x080030e8      0x118 CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
+                0x080030e8                xPortStartScheduler
  .text.prvHeapInit
-                0x080031e0       0x64 CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
+                0x08003200       0x64 CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
  .text.prvInsertBlockIntoFreeList
-                0x08003244       0x64 CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
+                0x08003264       0x64 CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
  .text.pvPortMalloc
-                0x080032a8       0xfc CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
-                0x080032a8                pvPortMalloc
+                0x080032c8       0xfc CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
+                0x080032c8                pvPortMalloc
  .text.vPortFree
-                0x080033a4       0x7c CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
-                0x080033a4                vPortFree
+                0x080033c4       0x7c CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
+                0x080033c4                vPortFree
  .text.prvResetNextTaskUnblockTime
-                0x08003420       0x2c CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x08003440       0x2c CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .text.prvInitialiseNewTask
-                0x0800344c       0xfe CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
- *fill*         0x0800354a        0x2 
+                0x0800346c       0xfe CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+ *fill*         0x0800356a        0x2 
  .text.prvInitialiseTaskLists
-                0x0800354c       0x68 CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x0800356c       0x68 CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .text.prvAddNewTaskToReadyList
-                0x080035b4       0xa8 CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x080035d4       0xa8 CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .text.prvDeleteTCB
-                0x0800365c       0x40 CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x0800367c       0x40 CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .text.prvCheckTasksWaitingTermination
-                0x0800369c       0x4c CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x080036bc       0x4c CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .text.prvIdleTask
-                0x080036e8       0x28 CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x08003708       0x28 CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .text.prvAddCurrentTaskToDelayedList
-                0x08003710       0x98 CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x08003730       0x98 CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .text.xTaskCreateStatic
-                0x080037a8       0x7a CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
-                0x080037a8                xTaskCreateStatic
+                0x080037c8       0x7a CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x080037c8                xTaskCreateStatic
  .text.xTaskCreate
-                0x08003822       0x6a CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
-                0x08003822                xTaskCreate
+                0x08003842       0x6a CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x08003842                xTaskCreate
  .text.vTaskStartScheduler
-                0x0800388c       0x84 CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
-                0x0800388c                vTaskStartScheduler
+                0x080038ac       0x84 CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x080038ac                vTaskStartScheduler
  .text.vTaskSuspendAll
-                0x08003910       0x10 CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
-                0x08003910                vTaskSuspendAll
+                0x08003930       0x10 CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x08003930                vTaskSuspendAll
  .text.xTaskIncrementTick
-                0x08003920      0x118 CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
-                0x08003920                xTaskIncrementTick
+                0x08003940      0x118 CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x08003940                xTaskIncrementTick
  .text.xTaskResumeAll
-                0x08003a38       0xf8 CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
-                0x08003a38                xTaskResumeAll
+                0x08003a58       0xf8 CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x08003a58                xTaskResumeAll
  .text.vTaskDelay
-                0x08003b30       0x4c CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
-                0x08003b30                vTaskDelay
+                0x08003b50       0x4c CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x08003b50                vTaskDelay
  .text.vTaskSwitchContext
-                0x08003b7c       0xa4 CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
-                0x08003b7c                vTaskSwitchContext
- .text.__errno  0x08003c20        0xc c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-errno.o)
-                0x08003c20                __errno
+                0x08003b9c       0xa4 CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x08003b9c                vTaskSwitchContext
+ .text.__errno  0x08003c40        0xc c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-errno.o)
+                0x08003c40                __errno
  .text.__libc_init_array
-                0x08003c2c       0x48 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-init.o)
-                0x08003c2c                __libc_init_array
- .text.memset   0x08003c74       0xa4 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-memset.o)
-                0x08003c74                memset
+                0x08003c4c       0x48 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-init.o)
+                0x08003c4c                __libc_init_array
+ .text.memset   0x08003c94       0xa4 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-memset.o)
+                0x08003c94                memset
  .text.cleanup_glue
-                0x08003d18       0x48 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-reent.o)
-                0x08003d18                cleanup_glue
+                0x08003d38       0x48 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-reent.o)
+                0x08003d38                cleanup_glue
  .text._reclaim_reent
-                0x08003d60       0x90 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-reent.o)
-                0x08003d60                _reclaim_reent
+                0x08003d80       0x90 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-reent.o)
+                0x08003d80                _reclaim_reent
  .text.startup.register_fini
-                0x08003df0       0x14 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-__call_atexit.o)
- .text.atexit   0x08003e04        0xc c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-atexit.o)
-                0x08003e04                atexit
+                0x08003e10       0x14 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-__call_atexit.o)
+ .text.atexit   0x08003e24        0xc c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-atexit.o)
+                0x08003e24                atexit
  .text.__libc_fini_array
-                0x08003e10       0x2c c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-fini.o)
-                0x08003e10                __libc_fini_array
+                0x08003e30       0x2c c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-fini.o)
+                0x08003e30                __libc_fini_array
  .text._malloc_trim_r
-                0x08003e3c       0xa0 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-freer.o)
-                0x08003e3c                _malloc_trim_r
- .text._free_r  0x08003edc      0x20c c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-freer.o)
-                0x08003edc                _free_r
+                0x08003e5c       0xa0 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-freer.o)
+                0x08003e5c                _malloc_trim_r
+ .text._free_r  0x08003efc      0x20c c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-freer.o)
+                0x08003efc                _free_r
  .text.__retarget_lock_acquire_recursive
-                0x080040e8        0x4 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-lock.o)
-                0x080040e8                __retarget_lock_acquire_recursive
+                0x08004108        0x4 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-lock.o)
+                0x08004108                __retarget_lock_acquire_recursive
  .text.__retarget_lock_release_recursive
-                0x080040ec        0x4 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-lock.o)
-                0x080040ec                __retarget_lock_release_recursive
+                0x0800410c        0x4 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-lock.o)
+                0x0800410c                __retarget_lock_release_recursive
  .text.__malloc_lock
-                0x080040f0        0xc c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-mlock.o)
-                0x080040f0                __malloc_lock
+                0x08004110        0xc c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-mlock.o)
+                0x08004110                __malloc_lock
  .text.__malloc_unlock
-                0x080040fc        0xc c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-mlock.o)
-                0x080040fc                __malloc_unlock
- .text._sbrk_r  0x08004108       0x24 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-sbrkr.o)
-                0x08004108                _sbrk_r
+                0x0800411c        0xc c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-mlock.o)
+                0x0800411c                __malloc_unlock
+ .text._sbrk_r  0x08004128       0x24 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-sbrkr.o)
+                0x08004128                _sbrk_r
  .text.__register_exitproc
-                0x0800412c       0x8c c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-__atexit.o)
-                0x0800412c                __register_exitproc
+                0x0800414c       0x8c c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-__atexit.o)
+                0x0800414c                __register_exitproc
  *(.glue_7)
- .glue_7        0x080041b8        0x0 linker stubs
+ .glue_7        0x080041d8        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x080041b8        0x0 linker stubs
+ .glue_7t       0x080041d8        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x080041b8        0x0 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .eh_frame      0x080041d8        0x0 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
  *(.init)
- .init          0x080041b8        0x4 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crti.o
-                0x080041b8                _init
- .init          0x080041bc        0x8 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtn.o
+ .init          0x080041d8        0x4 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crti.o
+                0x080041d8                _init
+ .init          0x080041dc        0x8 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtn.o
  *(.fini)
- .fini          0x080041c4        0x4 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crti.o
-                0x080041c4                _fini
- .fini          0x080041c8        0x8 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtn.o
-                0x080041d0                . = ALIGN (0x4)
-                0x080041d0                _etext = .
+ .fini          0x080041e4        0x4 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crti.o
+                0x080041e4                _fini
+ .fini          0x080041e8        0x8 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtn.o
+                0x080041f0                . = ALIGN (0x4)
+                0x080041f0                _etext = .
 
-.vfp11_veneer   0x080041d0        0x0
- .vfp11_veneer  0x080041d0        0x0 linker stubs
+.vfp11_veneer   0x080041f0        0x0
+ .vfp11_veneer  0x080041f0        0x0 linker stubs
 
-.v4_bx          0x080041d0        0x0
- .v4_bx         0x080041d0        0x0 linker stubs
+.v4_bx          0x080041f0        0x0
+ .v4_bx         0x080041f0        0x0 linker stubs
 
-.iplt           0x080041d0        0x0
- .iplt          0x080041d0        0x0 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+.iplt           0x080041f0        0x0
+ .iplt          0x080041f0        0x0 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.rodata         0x080041d0       0xcc
-                0x080041d0                . = ALIGN (0x4)
+.rodata         0x080041f0       0xcc
+                0x080041f0                . = ALIGN (0x4)
  *(.rodata)
- .rodata        0x080041d0       0x70 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/freertos.c.obj
+ .rodata        0x080041f0       0x70 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/freertos.c.obj
  *(.rodata*)
  .rodata.HallDirCcw
-                0x08004240        0x7 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/bsp_hall.c.obj
-                0x08004240                HallDirCcw
- *fill*         0x08004247        0x1 
+                0x08004260        0x7 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/bsp_hall.c.obj
+                0x08004260                HallDirCcw
+ *fill*         0x08004267        0x1 
  .rodata.str1.4
-                0x08004248       0x2d CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/freertos.c.obj
- *fill*         0x08004275        0x3 
- .rodata.AHBPrescTable
-                0x08004278       0x10 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/system_stm32f4xx.c.obj
-                0x08004278                AHBPrescTable
- .rodata.APBPrescTable
-                0x08004288        0x8 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/system_stm32f4xx.c.obj
-                0x08004288                APBPrescTable
- .rodata.vTaskStartScheduler.str1.4
-                0x08004290        0x5 CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x08004268       0x2d CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/freertos.c.obj
  *fill*         0x08004295        0x3 
+ .rodata.AHBPrescTable
+                0x08004298       0x10 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/system_stm32f4xx.c.obj
+                0x08004298                AHBPrescTable
+ .rodata.APBPrescTable
+                0x080042a8        0x8 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/system_stm32f4xx.c.obj
+                0x080042a8                APBPrescTable
+ .rodata.vTaskStartScheduler.str1.4
+                0x080042b0        0x5 CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+ *fill*         0x080042b5        0x3 
  .rodata._global_impure_ptr
-                0x08004298        0x4 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-impure.o)
-                0x08004298                _global_impure_ptr
-                0x0800429c                . = ALIGN (0x4)
+                0x080042b8        0x4 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-impure.o)
+                0x080042b8                _global_impure_ptr
+                0x080042bc                . = ALIGN (0x4)
 
-.ARM.extab      0x0800429c        0x0
-                0x0800429c                . = ALIGN (0x4)
+.ARM.extab      0x080042bc        0x0
+                0x080042bc                . = ALIGN (0x4)
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x0800429c                . = ALIGN (0x4)
+                0x080042bc                . = ALIGN (0x4)
 
-.ARM            0x0800429c        0x8
-                0x0800429c                . = ALIGN (0x4)
-                0x0800429c                __exidx_start = .
+.ARM            0x080042bc        0x8
+                0x080042bc                . = ALIGN (0x4)
+                0x080042bc                __exidx_start = .
  *(.ARM.exidx*)
- .ARM.exidx     0x0800429c        0x8 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
-                0x080042a4                __exidx_end = .
-                0x080042a4                . = ALIGN (0x4)
+ .ARM.exidx     0x080042bc        0x8 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+                0x080042c4                __exidx_end = .
+                0x080042c4                . = ALIGN (0x4)
 
-.rel.dyn        0x080042a4        0x0
- .rel.iplt      0x080042a4        0x0 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+.rel.dyn        0x080042c4        0x0
+ .rel.iplt      0x080042c4        0x0 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.preinit_array  0x080042a4        0x0
-                0x080042a4                . = ALIGN (0x4)
-                0x080042a4                PROVIDE (__preinit_array_start = .)
+.preinit_array  0x080042c4        0x0
+                0x080042c4                . = ALIGN (0x4)
+                0x080042c4                PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x080042a4                PROVIDE (__preinit_array_end = .)
-                0x080042a4                . = ALIGN (0x4)
+                0x080042c4                PROVIDE (__preinit_array_end = .)
+                0x080042c4                . = ALIGN (0x4)
 
-.init_array     0x080042a4        0x8
-                0x080042a4                . = ALIGN (0x4)
-                0x080042a4                PROVIDE (__init_array_start = .)
+.init_array     0x080042c4        0x8
+                0x080042c4                . = ALIGN (0x4)
+                0x080042c4                PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  .init_array.00000
-                0x080042a4        0x4 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-__call_atexit.o)
+                0x080042c4        0x4 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-__call_atexit.o)
  *(.init_array*)
- .init_array    0x080042a8        0x4 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
-                0x080042ac                PROVIDE (__init_array_end = .)
-                0x080042ac                . = ALIGN (0x4)
+ .init_array    0x080042c8        0x4 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+                0x080042cc                PROVIDE (__init_array_end = .)
+                0x080042cc                . = ALIGN (0x4)
 
-.fini_array     0x080042ac        0x4
-                0x080042ac                . = ALIGN (0x4)
-                0x080042ac                PROVIDE (__fini_array_start = .)
+.fini_array     0x080042cc        0x4
+                0x080042cc                . = ALIGN (0x4)
+                0x080042cc                PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x080042ac        0x4 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
-                0x080042b0                PROVIDE (__fini_array_end = .)
-                0x080042b0                . = ALIGN (0x4)
-                0x080042b0                _sidata = LOADADDR (.data)
+ .fini_array    0x080042cc        0x4 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+                0x080042d0                PROVIDE (__fini_array_end = .)
+                0x080042d0                . = ALIGN (0x4)
+                0x080042d0                _sidata = LOADADDR (.data)
 
-.data           0x20000000      0x85c load address 0x080042b0
+.data           0x20000000      0x85c load address 0x080042d0
                 0x20000000                . = ALIGN (0x4)
                 0x20000000                _sdata = .
  *(.data)
@@ -2975,12 +2975,12 @@ LOAD c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/
  *(.RamFunc*)
                 0x2000085c                . = ALIGN (0x4)
                 0x2000085c                _edata = .
-                0x08004b0c                _siccmram = LOADADDR (.ccmram)
+                0x08004b2c                _siccmram = LOADADDR (.ccmram)
 
-.igot.plt       0x2000085c        0x0 load address 0x08004b0c
+.igot.plt       0x2000085c        0x0 load address 0x08004b2c
  .igot.plt      0x2000085c        0x0 c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.ccmram         0x10000000        0x0 load address 0x08004b0c
+.ccmram         0x10000000        0x0 load address 0x08004b2c
                 0x10000000                . = ALIGN (0x4)
                 0x10000000                _sccmram = .
  *(.ccmram)
@@ -3439,35 +3439,35 @@ LOAD c:/progra~1/gcc-ar~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/
  .debug_ranges  0x00000f70       0x48 CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
  .debug_ranges  0x00000fb8      0x280 CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
 
-.debug_line     0x00000000    0x16cd2
+.debug_line     0x00000000    0x16cdd
  .debug_line    0x00000000      0x636 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/bsp_bldc.c.obj
  .debug_line    0x00000636      0x49f CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/bsp_hall.c.obj
- .debug_line    0x00000ad5      0x33d CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/comminicate.c.obj
- .debug_line    0x00000e12      0x605 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/contrl.c.obj
- .debug_line    0x00001417      0x529 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/freertos.c.obj
- .debug_line    0x00001940      0x2ad CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/gpio.c.obj
- .debug_line    0x00001bed      0x58d CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/main.c.obj
- .debug_line    0x0000217a      0x265 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
- .debug_line    0x000023df      0x3b8 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/stm32f4xx_hal_timebase_tim.c.obj
- .debug_line    0x00002797      0x54a CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/stm32f4xx_it.c.obj
- .debug_line    0x00002ce1      0x1c8 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/sysmem.c.obj
- .debug_line    0x00002ea9      0x31f CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/system_stm32f4xx.c.obj
- .debug_line    0x000031c8      0x6a6 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/tim.c.obj
- .debug_line    0x0000386e      0x4ce CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/usart.c.obj
- .debug_line    0x00003d3c       0xdc CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Startup/startup_stm32f407igtx.s.obj
- .debug_line    0x00003e18      0x68b CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
- .debug_line    0x000044a3      0x89e CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
- .debug_line    0x00004d41      0xef4 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
- .debug_line    0x00005c35      0x7b0 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
- .debug_line    0x000063e5      0xbdf CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
- .debug_line    0x00006fc4     0x4b71 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
- .debug_line    0x0000bb35     0x1d95 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
- .debug_line    0x0000d8ca     0x4714 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
- .debug_line    0x00011fde     0x131a CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj
- .debug_line    0x000132f8      0x428 CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
- .debug_line    0x00013720      0x7d9 CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
- .debug_line    0x00013ef9      0x7e6 CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
- .debug_line    0x000146df     0x25f3 CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+ .debug_line    0x00000ad5      0x348 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/comminicate.c.obj
+ .debug_line    0x00000e1d      0x605 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/contrl.c.obj
+ .debug_line    0x00001422      0x529 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/freertos.c.obj
+ .debug_line    0x0000194b      0x2ad CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/gpio.c.obj
+ .debug_line    0x00001bf8      0x58d CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/main.c.obj
+ .debug_line    0x00002185      0x265 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
+ .debug_line    0x000023ea      0x3b8 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/stm32f4xx_hal_timebase_tim.c.obj
+ .debug_line    0x000027a2      0x54a CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/stm32f4xx_it.c.obj
+ .debug_line    0x00002cec      0x1c8 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/sysmem.c.obj
+ .debug_line    0x00002eb4      0x31f CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/system_stm32f4xx.c.obj
+ .debug_line    0x000031d3      0x6a6 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/tim.c.obj
+ .debug_line    0x00003879      0x4ce CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/usart.c.obj
+ .debug_line    0x00003d47       0xdc CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Startup/startup_stm32f407igtx.s.obj
+ .debug_line    0x00003e23      0x68b CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
+ .debug_line    0x000044ae      0x89e CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
+ .debug_line    0x00004d4c      0xef4 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
+ .debug_line    0x00005c40      0x7b0 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
+ .debug_line    0x000063f0      0xbdf CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
+ .debug_line    0x00006fcf     0x4b71 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
+ .debug_line    0x0000bb40     0x1d95 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
+ .debug_line    0x0000d8d5     0x4714 CMakeFiles/clion_car_motor_hardware.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
+ .debug_line    0x00011fe9     0x131a CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj
+ .debug_line    0x00013303      0x428 CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
+ .debug_line    0x0001372b      0x7d9 CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
+ .debug_line    0x00013f04      0x7e6 CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
+ .debug_line    0x000146ea     0x25f3 CMakeFiles/clion_car_motor_hardware.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
 
 .debug_str      0x00000000     0x6e06
  .debug_str     0x00000000      0xbf4 CMakeFiles/clion_car_motor_hardware.elf.dir/Core/Src/bsp_bldc.c.obj
