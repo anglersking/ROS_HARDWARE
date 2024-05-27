@@ -1,0 +1,14 @@
+keil_car_motor_hardware\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c
+keil_car_motor_hardware\stream_buffer.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+keil_car_motor_hardware\stream_buffer.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+keil_car_motor_hardware\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+keil_car_motor_hardware\stream_buffer.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+keil_car_motor_hardware\stream_buffer.o: ../Core/Inc/FreeRTOSConfig.h
+keil_car_motor_hardware\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+keil_car_motor_hardware\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+keil_car_motor_hardware\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+keil_car_motor_hardware\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
+keil_car_motor_hardware\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+keil_car_motor_hardware\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+keil_car_motor_hardware\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+keil_car_motor_hardware\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/stream_buffer.h
