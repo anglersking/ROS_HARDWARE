@@ -1,11 +1,11 @@
 #include "car_task.h"
 #include "mpu6050.h"
-#include "inv_mpu_user.h"
 
 #include "contrl.h"
 #include "comminicate.h"
 #include "usart.h"
-
+#include "inv_mpu_user.h"
+#include "imu.h"
 extern Upload_Data Send_Data, Recive_Data;
 
 
@@ -15,7 +15,7 @@ int  Encoder_left, Encoder_right;     //����ٶ�
 float Movement = 0;                   //�ٶȵ���  
 int  Contrl_Turn = 64;                //ת����ڱ���
 
-//�������ݲɼ�����
+
 void Car_Task_200HZ(void)
 {
 		static struct mpu6050_data Last_Data;
@@ -24,23 +24,25 @@ void Car_Task_200HZ(void)
 			OutMpu = Last_Data;
 		else
 			 Last_Data = OutMpu;
+#ifdef DEBUG_Car_Task_200HZ
+        HAL_UART_Transmit(&huart1,(uint8_t *) "IMU TASK\n", 9, 100);
+        HAL_UART_Transmit(&huart1,(uint8_t *) mpu_dmp_get_data(), 2, 100);
+#endif
+#ifdef USE_ENCODER
+    		Robot_Encoder_Get_CNT();
+#endif
 
 
-
-//        HAL_UART_Transmit(&huart1,(uint8_t *) "IMU TASK\n", 9, 100);
-
-//        HAL_UART_Transmit(&huart1,(uint8_t *) mpu_dmp_get_data(), 2, 100);
-
-
-
-
-		Robot_Encoder_Get_CNT();
-
-//		MPU_Get_Accelerometer(&Send_Data.Sensor_Str.Link_Accelerometer);	//ͨ��IIC��ȡ���ٶ���Ϣ
-//		MPU_Get_Gyroscope(&Send_Data.Sensor_Str.Link_Gyroscope);			//ͨ��IIC��ȡ���ٶ���Ϣ
+#ifdef OLD_METHOD
+        MPU_Get_Accelerometer(&Send_Data.Sensor_Str.Link_Accelerometer);	//ͨ��IIC��ȡ���ٶ���Ϣ
+		MPU_Get_Gyroscope(&Send_Data.Sensor_Str.Link_Gyroscope);			//ͨ��IIC��ȡ���ٶ���Ϣ
         MPU_Get_Accelerometer(&OutMpu.acc_x,&OutMpu.acc_y,&OutMpu.acc_z);	//ͨ��IIC��ȡ���ٶ���Ϣ
-//        MPU_Get_Gyroscope(&Send_Data.Sensor_Str.Link_Gyroscope);			//ͨ��IIC��ȡ���ٶ���Ϣ
+        MPU_Get_Gyroscope(&Send_Data.Sensor_Str.Link_Gyroscope);			//ͨ��IIC��ȡ���ٶ���Ϣ
+        HAL_UART_Transmit(&huart1,(uint8_t *) OutMpu.acc_x, 8, 100);
+#endif
 
+//        IMU imu;
+//        imu.update(&Send_Data);
         Send_Data.Sensor_Str.Link_Accelerometer.X_data=OutMpu.acc_x ;
         Send_Data.Sensor_Str.Link_Accelerometer.Y_data=OutMpu.acc_y;
         Send_Data.Sensor_Str.Link_Accelerometer.Z_data=OutMpu.acc_z;
@@ -48,48 +50,53 @@ void Car_Task_200HZ(void)
         Send_Data.Sensor_Str.Link_Gyroscope.Y_data=OutMpu.gyro_y;
         Send_Data.Sensor_Str.Link_Gyroscope.Z_data=OutMpu.gyro_z;
 
-//        HAL_UART_Transmit(&huart1,(uint8_t *) OutMpu.acc_x, 8, 100);
-
-
-
-
-
-
 
 
 }
 
 void Car_Task_100HZ(void)
 {
+
+
+    Left_moto.Current_Speed = Left_moto.Target_Speed;
+    Right_moto.Current_Speed = Right_moto.Target_Speed ;
+    Moto_Control_speed(Right_moto.Current_Speed, Right_moto.Target_Speed ,MOTO_RIGHT);
+    Moto_Control_speed(Left_moto.Current_Speed,  Left_moto.Target_Speed  ,MOTO_LEFT );
+#ifdef DEBUG_CAR_TASK_100HZ
+    HAL_UART_Transmit(&huart1,(uint8_t *) "control Task\n", 13, 100);
+
+#endif
+#ifdef USE_PID
+
+
 	Encoder_left  = Read_Encoder(1);
 	Encoder_right = -Read_Encoder(2);
-	
+
 	//1��ȷ��ֱ����PWM
-	
-		Balance_Pwm = 0;
-                //Vertical_Ring_PD(OutMpu.pitch, OutMpu.gyro_x);
-	
+
+    Balance_Pwm = 0;
+    Vertical_Ring_PD(OutMpu.pitch, OutMpu.gyro_x);
+
 	//2��ȷ���ٶȻ�PWM
-	
-	  Velocity_Pwm =0;
-              //Vertical_speed_PI(Encoder_left,Encoder_right,OutMpu.pitch, Movement );
-	
-	
+
+    Velocity_Pwm =0;
+    Vertical_speed_PI(Encoder_left,Encoder_right,OutMpu.pitch, Movement );
+
+
 	//3��ȷ��ת��PWM
-	
-		Turn_Pwm = 0;
-                //Vertical_turn_PD(Contrl_Turn, OutMpu.gyro_z);
-	
+
+    Turn_Pwm = 0;
+    Vertical_turn_PD(Contrl_Turn, OutMpu.gyro_z);
+
 	//4��ȷ���������ҵ����PWM
-//	  printf("Balance_Pwm:%d,Velocity_Pwm:%d,Turn_Pwm:%d",Balance_Pwm,Velocity_Pwm,Turn_Pwm);
-      Motor1 = Balance_Pwm + Velocity_Pwm + Turn_Pwm;
-	  Motor2 = Balance_Pwm + Velocity_Pwm - Turn_Pwm;
-	
-      PWM_Limiting(&Motor1,&Motor2);
-	
-	
+    Motor1 = Balance_Pwm + Velocity_Pwm + Turn_Pwm;
+    Motor2 = Balance_Pwm + Velocity_Pwm - Turn_Pwm;
+
+    PWM_Limiting(&Motor1,&Motor2);
+
 	//5�����õ��
-     Set_PWM(Motor1,Motor2);
+    Set_PWM(Motor1,Motor2);
+#endif
 	
 }
 
@@ -164,9 +171,10 @@ void Moto_Control_speed(float current_speed,float target_speed, unsigned char Mo
 		#endif
 	}
 	// moto control function
-	//PWM_Output(Left_moto.ESC_Output_PWM, Right_moto.ESC_Output_PWM);
+//	PWM_Output(Left_moto.ESC_Output_PWM, Right_moto.ESC_Output_PWM);
+    PWM_Limiting(&Left_moto.ESC_Output_PWM,&Right_moto.ESC_Output_PWM);
 	Set_PWM(Left_moto.ESC_Output_PWM, Right_moto.ESC_Output_PWM);
-	//Huanyu_PWM_Output(500, 500);
+
 }
 
 
