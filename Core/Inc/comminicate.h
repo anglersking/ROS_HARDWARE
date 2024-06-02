@@ -47,7 +47,7 @@ extern float send_data[4];
 void USART1_SendChar(int b);
 void SendTo_UbuntuPC(void);
 void Kinematics_Positive(float vx,float vz);
-void shanwai_send_data1(uint8_t *value, uint32_t size);
+//void shanwai_send_data1(uint8_t *value, uint32_t size);
 
 #endif
 

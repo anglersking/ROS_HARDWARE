@@ -8,15 +8,20 @@
 //»úÐµ0µã
 #define Mechanical_balance 0
 
-#define AIN1(PinState)    HAL_GPIO_WritePin( GPIOE, GPIO_PIN_13, (GPIO_PinState)PinState)
-#define AIN2(PinState)    HAL_GPIO_WritePin( GPIOE, GPIO_PIN_15, (GPIO_PinState)PinState)
+#define AIN1(PinState)    HAL_GPIO_WritePin( GPIOE, GPIO_PIN_7, (GPIO_PinState)PinState)
+#define AIN2(PinState)    HAL_GPIO_WritePin( GPIOE, GPIO_PIN_8, (GPIO_PinState)PinState)
+#define AIN3(PinState)    HAL_GPIO_WritePin( GPIOE, GPIO_PIN_9, (GPIO_PinState)PinState)
+#define AIN4(PinState)    HAL_GPIO_WritePin( GPIOE, GPIO_PIN_10, (GPIO_PinState)PinState)
+
 
 #define BIN1(PinState)    HAL_GPIO_WritePin( GPIOC, GPIO_PIN_3, (GPIO_PinState)PinState)
 #define BIN2(PinState)    HAL_GPIO_WritePin( GPIOA, GPIO_PIN_3, (GPIO_PinState)PinState)
 
-#define PWMA   TIM4->CCR1 
-#define PWMB   TIM5->CCR3
+#define PWMA   TIM3->CCR1
+#define PWMB   TIM3->CCR2
 
+#define PWMC   TIM3->CCR3
+#define PWMD   TIM4->CCR4
 
 /***********robot***********/
 

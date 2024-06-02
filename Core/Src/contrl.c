@@ -181,14 +181,16 @@ void Set_PWM(int motor1,int motor2)
 	if(motor1>0)			AIN2(1),			AIN1(0);
 	else 	          	AIN2(0),			AIN1(1);
 	PWMA=Dead_Zone+(abs(motor1))*1.17;
-	
-	
+    PWMC=Dead_Zone+(abs(motor1))*1.17;
+
 	if(motor2>0)			BIN1(1),			BIN2(0);
 	else       		 		BIN1(0),			BIN2(1);
-	PWMB=Dead_Zone+(abs(motor2))*1.17;	
-	
-	printf("PWMA = %d\n",PWMA);
-  printf("PWMB = %d\n",PWMB);
+	PWMB=Dead_Zone+(abs(motor2))*1.17;
+    PWMD=Dead_Zone+(abs(motor2))*1.17;
+
+
+//	printf("PWMA = %d\n",PWMA);
+//  printf("PWMB = %d\n",PWMB);
 }
 
 

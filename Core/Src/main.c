@@ -96,11 +96,16 @@ int main(void)
   MX_USART1_UART_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
-//    RetargetInit(&huart1);
-//    printf("ROS_Hardware INIT \n");
+#ifdef USE_PRINTF
+        RetargetInit(&huart1);
+        printf("ROS_Hardware INIT \n");
+#endif
+
 //    HALLSensor_TIMx_Init();
     HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1);
     HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_2);
+    HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_3);
+    HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_4);
 
   /* USER CODE END 2 */
 

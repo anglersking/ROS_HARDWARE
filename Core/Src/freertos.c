@@ -22,7 +22,6 @@
 #include "task.h"
 #include "main.h"
 #include "cmsis_os.h"
-#include "stdio.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -31,6 +30,7 @@
 #include "comminicate.h"
 #include "car_task.h"
 #include "mpu6050.h"
+//#include "imu.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -147,7 +147,9 @@ void StartTask_uart2(void const * argument)
   /* Infinite loop */
   for(;;)
   {
-//    HAL_UART_Transmit(&huart1,(uint8_t *) "GPS TASK\n", 9, 100);
+#ifdef DEBUG_StartTask_uart2
+          HAL_UART_Transmit(&huart1,(uint8_t *) "GPS TASK\n", 9, 100);
+#endif
     osDelay(1000);
   }
   /* USER CODE END StartTask_uart2 */
@@ -163,14 +165,16 @@ void StartTask_uart2(void const * argument)
 void StartTask_uart1(void const * argument)
 {
   /* USER CODE BEGIN StartTask_uart1 */
-//  printf("uart1_init");
+
 
   /* Infinite loop */
   for(;;)
   {
 
-//    printf("Task uart");
-//    HAL_UART_Transmit(&huart1,(uint8_t *) "UART SEND\n", 10, 100);
+#ifdef DEBUG_StartTask_uart1
+          HAL_UART_Transmit(&huart1,(uint8_t *) "UART SEND\n", 10, 100);
+#endif
+
     SendTo_UbuntuPC();
     osDelay(100);
   }
@@ -191,41 +195,9 @@ void StartTask_PID(void const * argument)
   /* Infinite loop */
   for(;;)
   {
-//      Car_Task_100HZ();
-//
-      Left_moto.Current_Speed = Left_moto.Target_Speed;
-      Right_moto.Current_Speed = Right_moto.Target_Speed ;
+      Car_Task_100HZ();
 
-
-
-//      if (Right_moto.Target_Speed==0.0 )
-//      {
-//          if (flag==1) {
-//              Left_moto.Encoder_Value = 100;        //读取左右轮子的脉冲累计数
-//              Right_moto.Encoder_Value = 100;
-//              Left_moto.Current_Speed = 100;
-//              Right_moto.Current_Speed = 200;
-//              flag=2;
-//          }
-//
-//      }
-//      if (Right_moto.Target_Speed>0.0  )
-//      {
-//          if(flag==2) {
-//              Left_moto.Encoder_Value = 700;        //读取左右轮子的脉冲累计数
-//              Right_moto.Encoder_Value = 700;
-//
-//              Left_moto.Current_Speed = 700;
-//              Right_moto.Current_Speed = 700;
-//              flag=1;
-//          }
-////          Robot_Encoder_Get_CNT();
-//      }
-
-//      Moto_Control_speed(Right_moto.Current_Speed, Right_moto.Target_Speed ,MOTO_RIGHT);
-//      Moto_Control_speed(Left_moto.Current_Speed,  Left_moto.Target_Speed  ,MOTO_LEFT );
-//    HAL_UART_Transmit(&huart1,(uint8_t *) "control Task\n", 13, 100);
-    osDelay(100);
+      osDelay(100);
   }
   /* USER CODE END StartTask_PID */
 }
@@ -241,11 +213,23 @@ void StartTask_IMU(void const * argument)
 {
   /* USER CODE BEGIN StartTask_IMU */
   /* Infinite loop */
+
     MPU_Init();
     while(mpu_dmp_init());
+#ifdef New_method
+    IMU imu;
+    imu.init();
+
+#endif
+
+
+
   for(;;)
   {
-//    HAL_UART_Transmit(&huart1,(uint8_t *) "IMU TASK\n", 9, 100);
+#ifdef DEBUG_StartTask_IMU
+          HAL_UART_Transmit(&huart1,(uint8_t *) "IMU TASK\n", 9, 100);
+#endif
+
     Car_Task_200HZ();
     osDelay(100);
   }
