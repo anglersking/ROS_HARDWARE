@@ -1,8 +1,10 @@
 #include "car_task.h"
-//#include "mpu6050.h"
-//#include "inv_mpu_user.h"
+#include "mpu6050.h"
+#include "inv_mpu_user.h"
+
 #include "contrl.h"
 #include "comminicate.h"
+#include "usart.h"
 
 extern Upload_Data Send_Data, Recive_Data;
 
@@ -16,32 +18,45 @@ int  Contrl_Turn = 64;                //ת����ڱ���
 //�������ݲɼ�����
 void Car_Task_200HZ(void)
 {
-//		static struct mpu6050_data Last_Data;
-//
-////		if(mpu_dmp_get_data() !=0 )
-////			OutMpu = Last_Data;
-////		else
-////			 Last_Data = OutMpu;
-//
-//
-//		Send_Data.Sensor_Str.Link_Accelerometer.X_data=OutMpu.acc_x;
-//		Send_Data.Sensor_Str.Link_Accelerometer.Y_data=OutMpu.acc_y;
-//		Send_Data.Sensor_Str.Link_Accelerometer.Z_data=OutMpu.acc_z;
-//		Send_Data.Sensor_Str.Link_Gyroscope.X_data=OutMpu.gyro_x;
-//		Send_Data.Sensor_Str.Link_Gyroscope.Y_data=OutMpu.gyro_y;
-//		Send_Data.Sensor_Str.Link_Gyroscope.Z_data=OutMpu.gyro_z;
-		
-		
+		static struct mpu6050_data Last_Data;
+
+		if(mpu_dmp_get_data() !=0 )
+			OutMpu = Last_Data;
+		else
+			 Last_Data = OutMpu;
+
+
+
+//        HAL_UART_Transmit(&huart1,(uint8_t *) "IMU TASK\n", 9, 100);
+
+//        HAL_UART_Transmit(&huart1,(uint8_t *) mpu_dmp_get_data(), 2, 100);
+
+
+
+
 		Robot_Encoder_Get_CNT();
-		/*
-		MPU_Get_Accelerometer(&Send_Data.Sensor_Str.Link_Accelerometer);	//ͨ��IIC��ȡ���ٶ���Ϣ
-		MPU_Get_Gyroscope(&Send_Data.Sensor_Str.Link_Gyroscope);			//ͨ��IIC��ȡ���ٶ���Ϣ
-		
-		*/
-		
-		
-		
-			
+
+//		MPU_Get_Accelerometer(&Send_Data.Sensor_Str.Link_Accelerometer);	//ͨ��IIC��ȡ���ٶ���Ϣ
+//		MPU_Get_Gyroscope(&Send_Data.Sensor_Str.Link_Gyroscope);			//ͨ��IIC��ȡ���ٶ���Ϣ
+        MPU_Get_Accelerometer(&OutMpu.acc_x,&OutMpu.acc_y,&OutMpu.acc_z);	//ͨ��IIC��ȡ���ٶ���Ϣ
+//        MPU_Get_Gyroscope(&Send_Data.Sensor_Str.Link_Gyroscope);			//ͨ��IIC��ȡ���ٶ���Ϣ
+
+        Send_Data.Sensor_Str.Link_Accelerometer.X_data=OutMpu.acc_x ;
+        Send_Data.Sensor_Str.Link_Accelerometer.Y_data=OutMpu.acc_y;
+        Send_Data.Sensor_Str.Link_Accelerometer.Z_data=OutMpu.acc_z;
+        Send_Data.Sensor_Str.Link_Gyroscope.X_data=OutMpu.gyro_x;
+        Send_Data.Sensor_Str.Link_Gyroscope.Y_data=OutMpu.gyro_y;
+        Send_Data.Sensor_Str.Link_Gyroscope.Z_data=OutMpu.gyro_z;
+
+//        HAL_UART_Transmit(&huart1,(uint8_t *) OutMpu.acc_x, 8, 100);
+
+
+
+
+
+
+
+
 }
 
 void Car_Task_100HZ(void)

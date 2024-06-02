@@ -30,6 +30,7 @@
 #include "contrl.h"
 #include "comminicate.h"
 #include "car_task.h"
+#include "mpu6050.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -240,10 +241,13 @@ void StartTask_IMU(void const * argument)
 {
   /* USER CODE BEGIN StartTask_IMU */
   /* Infinite loop */
+    MPU_Init();
+    while(mpu_dmp_init());
   for(;;)
   {
 //    HAL_UART_Transmit(&huart1,(uint8_t *) "IMU TASK\n", 9, 100);
-    osDelay(1000);
+    Car_Task_200HZ();
+    osDelay(100);
   }
   /* USER CODE END StartTask_IMU */
 }

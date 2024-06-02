@@ -163,7 +163,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/Users/41884/Documents/git_anglersking_project/ROS_HARDWARE/clion_car_motor_hardware/cmake-build-debug"
+			"value" : "c:/Users/41884/CLionProjects/ROS_HARDWARE/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -259,10 +259,10 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "CXX compiler"
+					"value" : "No help, variable specified on the command line."
 				}
 			],
-			"type" : "STRING",
+			"type" : "UNINITIALIZED",
 			"value" : "C:/Program Files/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-g++.exe"
 		},
 		{
@@ -387,10 +387,10 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "C compiler"
+					"value" : "No help, variable specified on the command line."
 				}
 			],
-			"type" : "STRING",
+			"type" : "UNINITIALIZED",
 			"value" : "C:/Program Files/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc.exe"
 		},
 		{
@@ -651,7 +651,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/41884/Documents/git_anglersking_project/ROS_HARDWARE/clion_car_motor_hardware/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "C:/Users/41884/CLionProjects/ROS_HARDWARE/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -711,7 +711,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/41884/Documents/git_anglersking_project/ROS_HARDWARE/clion_car_motor_hardware"
+			"value" : "C:/Users/41884/CLionProjects/ROS_HARDWARE"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -751,7 +751,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Program Files/JetBrains/CLion 2022.3.1/bin/ninja/win/x64/ninja.exe"
+			"value" : "C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/ninja/win/x64/ninja.exe"
 		},
 		{
 			"name" : "CMAKE_MODULE_LINKER_FLAGS",
@@ -1187,7 +1187,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/41884/Documents/git_anglersking_project/ROS_HARDWARE/clion_car_motor_hardware/cmake-build-debug"
+			"value" : "C:/Users/41884/CLionProjects/ROS_HARDWARE/cmake-build-debug"
 		},
 		{
 			"name" : "clion_car_motor_hardware_IS_TOP_LEVEL",
@@ -1211,7 +1211,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/41884/Documents/git_anglersking_project/ROS_HARDWARE/clion_car_motor_hardware"
+			"value" : "C:/Users/41884/CLionProjects/ROS_HARDWARE"
 		}
 	],
 	"kind" : "cache",
