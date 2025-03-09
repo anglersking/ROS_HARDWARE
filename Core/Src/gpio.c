@@ -47,36 +47,35 @@ void MX_GPIO_Init(void)
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOH_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
-  __HAL_RCC_GPIOB_CLK_ENABLE();
   __HAL_RCC_GPIOE_CLK_ENABLE();
   __HAL_RCC_GPIOD_CLK_ENABLE();
   __HAL_RCC_GPIOC_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOE, BREAK_RIGHT_Pin|BREAK_LEFT_Pin|BREAK_BACK_LEFT_Pin|BREAK_BACK_RIGHT_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOE, CONVERT4_Pin|CONVERT1_Pin|CONVERT2_Pin|BREAK3_Pin
+                          |CONVERT3_Pin|BREAK4_Pin|BREAK1_Pin|BREAK2_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOC, CONVERT_RIGHT_Pin|CONVERT_LEFT_Pin|CONVERT_BACK_RIGHT_Pin|CONVERT_BACK_LEFT_Pin
-                          |MPU6050_SDA_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(MPU6050_SDA_GPIO_Port, MPU6050_SDA_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(MPU6050_SCL_GPIO_Port, MPU6050_SCL_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pins : PEPin PEPin PEPin PEPin */
-  GPIO_InitStruct.Pin = BREAK_RIGHT_Pin|BREAK_LEFT_Pin|BREAK_BACK_LEFT_Pin|BREAK_BACK_RIGHT_Pin;
+  /*Configure GPIO pins : PEPin PEPin PEPin PEPin
+                           PEPin PEPin PEPin PEPin */
+  GPIO_InitStruct.Pin = CONVERT4_Pin|CONVERT1_Pin|CONVERT2_Pin|BREAK3_Pin
+                          |CONVERT3_Pin|BREAK4_Pin|BREAK1_Pin|BREAK2_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOE, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : PCPin PCPin PCPin PCPin
-                           PCPin */
-  GPIO_InitStruct.Pin = CONVERT_RIGHT_Pin|CONVERT_LEFT_Pin|CONVERT_BACK_RIGHT_Pin|CONVERT_BACK_LEFT_Pin
-                          |MPU6050_SDA_Pin;
+  /*Configure GPIO pin : PtPin */
+  GPIO_InitStruct.Pin = MPU6050_SDA_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+  HAL_GPIO_Init(MPU6050_SDA_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pin : PtPin */
   GPIO_InitStruct.Pin = MPU6050_SCL_Pin;

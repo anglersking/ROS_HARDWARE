@@ -8,14 +8,27 @@
 //»úÐµ0µã
 #define Mechanical_balance 0
 
-#define AIN1(PinState)    HAL_GPIO_WritePin( GPIOE, GPIO_PIN_7, (GPIO_PinState)PinState)
-#define AIN2(PinState)    HAL_GPIO_WritePin( GPIOE, GPIO_PIN_8, (GPIO_PinState)PinState)
-#define AIN3(PinState)    HAL_GPIO_WritePin( GPIOE, GPIO_PIN_9, (GPIO_PinState)PinState)
-#define AIN4(PinState)    HAL_GPIO_WritePin( GPIOE, GPIO_PIN_10, (GPIO_PinState)PinState)
+#define AIN1(PinState)    HAL_GPIO_WritePin( GPIOE, GPIO_PIN_8, (GPIO_PinState)PinState)
+#define AIN2(PinState)    HAL_GPIO_WritePin( GPIOE, GPIO_PIN_9, (GPIO_PinState)PinState)
+//#define AIN3(PinState)    HAL_GPIO_WritePin( GPIOE, GPIO_PIN_12, (GPIO_PinState)PinState)
+//#define AIN4(PinState)    HAL_GPIO_WritePin( GPIOE, GPIO_PIN_7, (GPIO_PinState)PinState)
+
+//
+//#define BIN1(PinState)    HAL_GPIO_WritePin( GPIOC, GPIO_PIN_3, (GPIO_PinState)PinState)
+//#define BIN2(PinState)    HAL_GPIO_WritePin( GPIOA, GPIO_PIN_3, (GPIO_PinState)PinState)
+#define BIN1(PinState)    HAL_GPIO_WritePin( GPIOE, GPIO_PIN_12, (GPIO_PinState)PinState)
+#define BIN2(PinState)    HAL_GPIO_WritePin( GPIOE, GPIO_PIN_7, (GPIO_PinState)PinState)
+//#define BIN3(PinState)    HAL_GPIO_WritePin( GPIOC, GPIO_PIN_3, (GPIO_PinState)PinState)
+//#define BIN4(PinState)    HAL_GPIO_WritePin( GPIOA, GPIO_PIN_3, (GPIO_PinState)PinState)
 
 
-#define BIN1(PinState)    HAL_GPIO_WritePin( GPIOC, GPIO_PIN_3, (GPIO_PinState)PinState)
-#define BIN2(PinState)    HAL_GPIO_WritePin( GPIOA, GPIO_PIN_3, (GPIO_PinState)PinState)
+#define BK1(PinState)    HAL_GPIO_WritePin( GPIOE, GPIO_PIN_14, (GPIO_PinState)PinState)
+#define BK2(PinState)    HAL_GPIO_WritePin( GPIOE, GPIO_PIN_15, (GPIO_PinState)PinState)
+
+#define BK3(PinState)    HAL_GPIO_WritePin( GPIOE, GPIO_PIN_10, (GPIO_PinState)PinState)
+
+#define BK4(PinState)    HAL_GPIO_WritePin( GPIOE, GPIO_PIN_13, (GPIO_PinState)PinState)
+
 
 #define PWMA   TIM3->CCR1
 #define PWMB   TIM3->CCR2

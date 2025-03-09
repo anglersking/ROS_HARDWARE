@@ -241,7 +241,7 @@ void TIM6_DAC_IRQHandler(void)
 #include <stdio.h>
 #include <string.h>
 void SendFloatOverUART(UART_HandleTypeDef *huart, float value) {
-    char buffer[32]; // 足够大的缓冲区来存储浮点数和终止�?
+    char buffer[32]; // 足够大的缓冲区来存储浮点数和终止�??
     int length;
 
     // 使用sprintf将浮点数转换为字符串，并指定小数点后的位数（例如2位）
@@ -264,7 +264,7 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
         HAL_UART_Receive_IT(&huart1, Recive_Data.buffer, sizeof(Recive_Data.buffer));
         (Recive_Data.buffer[0] == 0xFe)?(Rcount++):(Rcount = 0);
 
-        if (Rcount ==PROTOCL_DATA_SIZE)	//验证数据包的长度 之前�? !=0
+        if (Rcount ==PROTOCL_DATA_SIZE)	//验证数据包的长度 之前�?? !=0
         {
 
             if(Recive_Data.Sensor_Str.Header == PROTOCOL_HEADER)	//验证数据包的头部校验信息
