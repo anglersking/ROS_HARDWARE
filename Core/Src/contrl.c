@@ -9,7 +9,7 @@ _Moto_Str Left_moto;
 _Moto_Str Right_moto;
 
 
-int   Dead_Zone=1200;    //电机死区
+int   Dead_Zone=100;    //电机死区
 int   control_turn=64;                             //转向控制
 
 
@@ -178,13 +178,13 @@ uint8_t Turn_off(const float Angle)
 
 void Set_PWM(int motor1,int motor2)
 {
-	if(motor1>0)			AIN2(1),			AIN1(0);
-	else 	          	AIN2(0),			AIN1(1);
+	if(motor1>0)			AIN1(1),			AIN2(1);
+	else 	          	AIN1(0),			AIN2(0);
 	PWMA=Dead_Zone+(abs(motor1))*1.17;
     PWMC=Dead_Zone+(abs(motor1))*1.17;
 
-	if(motor2>0)			BIN1(1),			BIN2(0);
-	else       		 		BIN1(0),			BIN2(1);
+	if(motor2>0)			BIN1(0),			BIN2(0);
+	else       		 		BIN1(1),			BIN2(1);
 	PWMB=Dead_Zone+(abs(motor2))*1.17;
     PWMD=Dead_Zone+(abs(motor2))*1.17;
 
