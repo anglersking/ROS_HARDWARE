@@ -9,11 +9,11 @@
 extern Upload_Data Send_Data, Recive_Data;
 
 
-int  Balance_Pwm,Velocity_Pwm,Turn_Pwm;        //PID�����PWMֵ
-int  Motor1, Motor2;                  //���ҵ��PWMֵ
-int  Encoder_left, Encoder_right;     //����ٶ�
-float Movement = 0;                   //�ٶȵ���  
-int  Contrl_Turn = 64;                //ת����ڱ���
+int  Balance_Pwm,Velocity_Pwm,Turn_Pwm;        //PID output PWM values
+int  Motor1, Motor2;                  //left / right motor PWM values
+int  Encoder_left, Encoder_right;     //encoder speed
+float Movement = 0;                   //speed setpoint  
+int  Contrl_Turn = 64;                //turn setpoint
 
 
 void Car_Task_200HZ(void)
@@ -34,10 +34,10 @@ void Car_Task_200HZ(void)
 
 
 #ifdef OLD_METHOD
-        MPU_Get_Accelerometer(&Send_Data.Sensor_Str.Link_Accelerometer);	//ͨ��IIC��ȡ���ٶ���Ϣ
-		MPU_Get_Gyroscope(&Send_Data.Sensor_Str.Link_Gyroscope);			//ͨ��IIC��ȡ���ٶ���Ϣ
-        MPU_Get_Accelerometer(&OutMpu.acc_x,&OutMpu.acc_y,&OutMpu.acc_z);	//ͨ��IIC��ȡ���ٶ���Ϣ
-        MPU_Get_Gyroscope(&Send_Data.Sensor_Str.Link_Gyroscope);			//ͨ��IIC��ȡ���ٶ���Ϣ
+        MPU_Get_Accelerometer(&Send_Data.Sensor_Str.Link_Accelerometer);	//read the accelerometer over IIC
+		MPU_Get_Gyroscope(&Send_Data.Sensor_Str.Link_Gyroscope);			//read the gyroscope over IIC
+        MPU_Get_Accelerometer(&OutMpu.acc_x,&OutMpu.acc_y,&OutMpu.acc_z);	//read the accelerometer over IIC
+        MPU_Get_Gyroscope(&Send_Data.Sensor_Str.Link_Gyroscope);			//read the gyroscope over IIC
         HAL_UART_Transmit(&huart1,(uint8_t *) OutMpu.acc_x, 8, 100);
 #endif
 
@@ -54,14 +54,49 @@ void Car_Task_200HZ(void)
 
 }
 
+/*
+ * Open-loop mapping: turn a target linear speed (m/s) into a motor PWM command.
+ * A startup floor (MOTOR_OPEN_LOOP_MIN_PWM) is added so low commands can still
+ * overcome the motor static friction.
+ */
+static int Speed_To_PWM(float target_speed)
+{
+	float abs_speed;
+	int pwm;
+
+	if(target_speed == 0.0f)
+		return 0;
+
+	abs_speed = (target_speed > 0.0f) ? target_speed : -target_speed;
+	if(abs_speed > MOTOR_OPEN_LOOP_SPEED_FULL_SCALE)
+		abs_speed = MOTOR_OPEN_LOOP_SPEED_FULL_SCALE;
+
+	pwm = MOTOR_OPEN_LOOP_MIN_PWM
+	    + (int)((float)(MOTOR_PWM_ABS_MAX - MOTOR_OPEN_LOOP_MIN_PWM) * abs_speed
+	            / MOTOR_OPEN_LOOP_SPEED_FULL_SCALE);
+	if(pwm > MOTOR_PWM_ABS_MAX)
+		pwm = MOTOR_PWM_ABS_MAX;
+
+	return (target_speed > 0.0f) ? pwm : -pwm;
+}
+
 void Car_Task_100HZ(void)
 {
-
-
-    Left_moto.Current_Speed = Left_moto.Target_Speed;
-    Right_moto.Current_Speed = Right_moto.Target_Speed ;
+#ifdef USE_ENCODER
     Moto_Control_speed(Right_moto.Current_Speed, Right_moto.Target_Speed ,MOTO_RIGHT);
     Moto_Control_speed(Left_moto.Current_Speed,  Left_moto.Target_Speed  ,MOTO_LEFT );
+#else
+    //open loop: no encoder feedback yet, map the target speed straight to a PWM command
+    int left_pwm  = Speed_To_PWM(Left_moto.Target_Speed);
+    int right_pwm = Speed_To_PWM(Right_moto.Target_Speed);
+
+    PWM_Limiting(&left_pwm, &right_pwm);
+    Left_moto.Current_Speed  = 0.0f;
+    Right_moto.Current_Speed = 0.0f;
+    Left_moto.ESC_Output_PWM  = (short)left_pwm;
+    Right_moto.ESC_Output_PWM = (short)right_pwm;
+    Set_PWM(left_pwm, right_pwm);
+#endif
 #ifdef DEBUG_CAR_TASK_100HZ
     HAL_UART_Transmit(&huart1,(uint8_t *) "control Task\n", 13, 100);
 
@@ -72,29 +107,29 @@ void Car_Task_100HZ(void)
 	Encoder_left  = Read_Encoder(1);
 	Encoder_right = -Read_Encoder(2);
 
-	//1��ȷ��ֱ����PWM
+	//1. compute the balance PWM
 
     Balance_Pwm = 0;
     Vertical_Ring_PD(OutMpu.pitch, OutMpu.gyro_x);
 
-	//2��ȷ���ٶȻ�PWM
+	//2. compute the speed PWM
 
     Velocity_Pwm =0;
     Vertical_speed_PI(Encoder_left,Encoder_right,OutMpu.pitch, Movement );
 
 
-	//3��ȷ��ת��PWM
+	//3. compute the turn PWM
 
     Turn_Pwm = 0;
     Vertical_turn_PD(Contrl_Turn, OutMpu.gyro_z);
 
-	//4��ȷ���������ҵ����PWM
+	//4. combine the left and right motor PWM
     Motor1 = Balance_Pwm + Velocity_Pwm + Turn_Pwm;
     Motor2 = Balance_Pwm + Velocity_Pwm - Turn_Pwm;
 
     PWM_Limiting(&Motor1,&Motor2);
 
-	//5�����õ��
+	//5. drive the motors
     Set_PWM(Motor1,Motor2);
 #endif
 	
@@ -172,8 +207,13 @@ void Moto_Control_speed(float current_speed,float target_speed, unsigned char Mo
 	}
 	// moto control function
 //	PWM_Output(Left_moto.ESC_Output_PWM, Right_moto.ESC_Output_PWM);
-    PWM_Limiting(&Left_moto.ESC_Output_PWM,&Right_moto.ESC_Output_PWM);
-	Set_PWM(Left_moto.ESC_Output_PWM, Right_moto.ESC_Output_PWM);
+	// clamp through int temporaries: ESC_Output_PWM is short, but PWM_Limiting() takes int*
+    int left_out  = Left_moto.ESC_Output_PWM;
+    int right_out = Right_moto.ESC_Output_PWM;
+    PWM_Limiting(&left_out,&right_out);
+    Left_moto.ESC_Output_PWM  = (short)left_out;
+    Right_moto.ESC_Output_PWM = (short)right_out;
+	Set_PWM(left_out, right_out);
 
 }
 
@@ -193,7 +233,6 @@ void Car_Task_5HZ(void)
 	  printf("\r\n");
 	  SendTo_UbuntuPC();		
 }
-
 
 
 
