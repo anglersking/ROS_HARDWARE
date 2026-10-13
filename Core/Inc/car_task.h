@@ -11,9 +11,9 @@ struct mpu6050_data{
 		short gyro_y;
 		short gyro_z;
 	
-		float pitch;    //������
-	  float roll;     //������
-	  float yaw;      //ƫ����
+		float pitch;    //pitch
+	  float roll;     //roll
+	  float yaw;      //yaw
 };
 
 extern struct mpu6050_data OutMpu;
